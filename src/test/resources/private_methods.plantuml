@@ -1,0 +1,33 @@
+@startuml
+interface Vehicle<T> {
+    +{abstract} start(): Unit
+    +{abstract} stop(): Unit
+}
+abstract class AbstractVehicle<T> {
+    +{abstract} description(): String
+    +start(): Unit
+    +stop(): Unit
+}
+class Bicycle<T, P> {
+    +description(): String
+}
+class Car<T : FourWheels<T, O, A>, O : Wheeled<T, O>, A : ComplexGeneric<T, O, A>> {
+    +bike: Bicycle
+    +description(): String
+    -privateMethod(): Unit
+}
+interface FourWheels<T, P, A> {
+}
+interface TwoWheels<T, P> {
+}
+interface Wheeled<T, P> {
+}
+Vehicle <|.. AbstractVehicle
+AbstractVehicle <|.. Bicycle
+TwoWheels <|.. Bicycle
+AbstractVehicle <|.. Car
+FourWheels <|.. Car
+Wheeled <|.. FourWheels
+Wheeled <|.. TwoWheels
+Vehicle <|.. Wheeled
+@enduml
