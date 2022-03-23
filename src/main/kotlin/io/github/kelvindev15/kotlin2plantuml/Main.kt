@@ -57,7 +57,7 @@ fun toConfiguration(args: Array<String>): Configuration = Configuration(
  */
 fun main(args: Array<String>) {
     require(args.isNotEmpty()) {
-        "At least a fully qualified input class must be provided"
+        "No fully qualified input class had been provided"
     }
     val outputFile = getOption(args, "-o")
         ?: "build${File.separatorChar}reports${File.separatorChar}diagram.plantuml"

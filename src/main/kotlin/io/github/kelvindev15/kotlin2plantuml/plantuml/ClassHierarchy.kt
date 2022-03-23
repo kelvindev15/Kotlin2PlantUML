@@ -25,7 +25,7 @@ class ClassHierarchy(
         }.loadClasses().forEach { addVertex(it.kotlin) }
         // GRAPH EDGES
         vertexSet().forEach {
-            it.superclasses.filter { c -> c != Any::class }.forEach { superclass ->
+            it.superclasses.filter { c -> c != Any::class && c in vertexSet() }.forEach { superclass ->
                 addEdge(
                     it,
                     superclass,
