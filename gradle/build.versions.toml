@@ -1,0 +1,35 @@
+[versions]
+alchemist = "<the version of alchemist is here>"
+junit = "5.8.2"
+kotest = "5.2.1"
+dokka = "1.6.10"
+kotlin = "1.6.10"
+jgrapht = "1.5.1"
+
+[bundles]
+alchemist = [
+    "alchemist",
+    "alchemist-incarnation-protelis",
+    "alchemist-swingui",
+    # Adding the newly defined libraries to the alchemist bundle makes them available automatically
+    "alchemist-maps",
+    "foobar"
+]
+
+[libraries]
+alchemist = { module = "it.unibo.alchemist:alchemist", version.ref = "alchemist" }
+classgraph = "io.github.classgraph:classgraph:4.8.141"
+junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
+kotest-runner = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
+kotlin-coroutines-core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
+
+[plugins]
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-qa = "org.danilopianini.gradle-kotlin-qa:0.13.0"
+multiJvmTesting = "org.danilopianini.multi-jvm-test-plugin:0.3.4"
+publishOnCentral = "org.danilopianini.publish-on-central:0.7.14"
+shadowJar = "com.github.johnrengelman.shadow:7.1.2"
+taskTree = "com.dorongold.task-tree:2.1.0"
