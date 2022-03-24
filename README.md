@@ -18,7 +18,7 @@ fullyQualifiedClass [...options]
  #### Options:
 
 ---------------------------------------------------
-
+* **-p, --packages**: `:` separated packages
 * **-o, --output**: output file
 * **-r, --recurse**: explore class hierarchy recursively
 * **-hf, --hide-fields**: hide fields
