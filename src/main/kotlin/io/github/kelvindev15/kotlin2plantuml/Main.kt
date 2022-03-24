@@ -19,8 +19,11 @@ fun getOption(args: Array<String>, vararg options: String): String? = options
 /**
  * Gets the cli visibility option for [args].
  */
-fun getVisibilityOption(args: Array<String>, vararg options: String): KVisibility =
-    getOption(args, *options)?.let { KVisibility.values()[it.toInt()] } ?: KVisibility.PUBLIC
+fun getVisibilityOption(args: Array<String>): KVisibility =
+    getOption(args, "-fv", "--field-visibility")?.let { KVisibility.values()[it.toInt()] } ?: KVisibility.PUBLIC
+
+fun getPackagesList(args: Array<String>) : List<String> =
+    getOption(args, "-p", "--packages")?.let { it.split(":") } ?: emptyList()
 
 /**
  * Returns an instance of a run configuration based on cli [args].
@@ -30,8 +33,8 @@ fun toConfiguration(args: Array<String>): Configuration = Configuration(
     hideMethods = listOf("-hm", "--hide-methods").any { it in args },
     hideRelationships = listOf("-hr", "--hide-relationships").any { it in args },
     recurse = listOf("-r", "--recurse").any { it in args },
-    maxFieldVisibility = getVisibilityOption(args, "-fv", "--field-visibility"),
-    maxMethodVisibility = getVisibilityOption(args, "-mv", "--method-visibility"),
+    maxFieldVisibility = getVisibilityOption(args),
+    maxMethodVisibility = getVisibilityOption(args),
 )
 
 /**
@@ -45,6 +48,7 @@ fun toConfiguration(args: Array<String>): Configuration = Configuration(
  * ---------------------------------------------------
  * -o, --output: output file
  * -r, --recurse: explore class hierarchy recursively
+ * -p, --packages: `:` separated packages
  *
  * -hf, --hide-fields: hide fields
  * -hm, --hide-methods: hide methods
@@ -68,6 +72,6 @@ fun main(args: Array<String>) {
     File(outputFile).apply {
         parentFile.mkdirs()
         createNewFile()
-        writeText(ClassDiagram(clazz, configuration = toConfiguration(args)).plantUml())
+        writeText(ClassDiagram(clazz, scanPackages = getPackagesList(args), configuration = toConfiguration(args)).plantUml())
     }
 }

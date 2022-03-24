@@ -10,8 +10,9 @@ class ClassDiagram(
 ) {
     constructor(
         vararg classRefs: KClass<*>,
+        scanPackages: List<String> = listOf(),
         configuration: Configuration = Configuration(),
-    ) : this(*classRefs.map { ClassHierarchy(it, configuration) }.toTypedArray())
+    ) : this(*classRefs.map { ClassHierarchy(it, scanPackages, configuration) }.toTypedArray())
 
     /**
      * @return a plantuml representation of this [ClassDiagram].

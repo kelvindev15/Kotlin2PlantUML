@@ -15,13 +15,14 @@ class ClassHierarchy(
      * The root of hierarchy.
      */
     val rootClass: KClass<*>,
+    scanPackages: List<String> = listOf(),
     private val configuration: Configuration = Configuration(),
 ) : Graph<KClass<*>, PlantUmlRelationship> by DefaultDirectedGraph(PlantUmlRelationship::class.java) {
 
     init {
         addVertex(rootClass)
         // GRAPH VERTICES
-        ClassGraph().acceptPackages(rootClass.java.packageName).scan().let {
+        ClassGraph().acceptPackages(rootClass.java.packageName, *scanPackages.toTypedArray()).scan().let {
             if (rootClass.isInterface) {
                 it.getClassesImplementing(rootClass.java)
             } else {
@@ -38,7 +39,7 @@ class ClassHierarchy(
                         if (it.isInterface != superclass.isInterface) {
                             RelationshipType.IMPLEMENTS
                         } else {
-                            RelationshipType.IMPLEMENTS
+                            RelationshipType.EXTENDS
                         }
                     )
                 )
