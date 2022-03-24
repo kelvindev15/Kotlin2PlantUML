@@ -33,7 +33,9 @@ interface OutOfThree
 
 interface ComplexGeneric<T, P, A> where T : FourWheels<T, P, A>, P : Wheeled<T, P>
 
-class Car<T, O, A : ComplexGeneric<T, O, A>> : AbstractVehicle<T>(), OutOfThree,
+class Car<T, O, A : ComplexGeneric<T, O, A>> :
+    AbstractVehicle<T>(),
+    OutOfThree,
     FourWheels<T, O, Vehicle<T>>
         where T : FourWheels<T, O, A>,
               O : Wheeled<T, O> {
@@ -41,12 +43,17 @@ class Car<T, O, A : ComplexGeneric<T, O, A>> : AbstractVehicle<T>(), OutOfThree,
         TODO("Not yet implemented")
     }
 
+    @Suppress("UnusedPrivateMember")
     private val privateField = ""
+
+    @Suppress("EmptyFunctionBlock", "UnusedPrivateMember")
     private fun privateMethod() {}
 
+    @Suppress("UnusedPrivateMember")
     val bike: Bicycle<T, O>? = null
 }
 
+@Suppress("UnusedPrivateClass")
 private class PrivateCar<T> : AbstractVehicle<T>(), OutOfThree {
     override fun description(): String {
         TODO("Not yet implemented")

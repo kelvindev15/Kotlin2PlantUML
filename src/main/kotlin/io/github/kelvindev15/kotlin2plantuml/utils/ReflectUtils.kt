@@ -1,12 +1,20 @@
 package io.github.kelvindev15.kotlin2plantuml.utils
 
-import kotlin.reflect.*
+import kotlin.reflect.KCallable
+import kotlin.reflect.KClass
+import kotlin.reflect.KFunction
+import kotlin.reflect.KParameter
+import kotlin.reflect.KTypeParameter
+import kotlin.reflect.KVisibility
 import kotlin.reflect.full.createType
 import kotlin.reflect.full.valueParameters
 import kotlin.reflect.jvm.javaType
 import kotlin.reflect.jvm.jvmErasure
 
-class PlantUmlUtils {
+/**
+ * PlantUML utilities.
+ */
+class ReflectUtils private constructor() {
     companion object {
         /**
          * Tries to load a [fullyQualifiedClass].
@@ -44,7 +52,7 @@ class PlantUmlUtils {
         /**
          * @return a character corresponding to the plantuml visibility specification.
          */
-        fun  KVisibility?.plantUml() = when(this) {
+        fun KVisibility?.plantUml() = when (this) {
             KVisibility.PUBLIC -> "+"
             KVisibility.PROTECTED -> "#"
             KVisibility.INTERNAL -> "~"
@@ -76,7 +84,7 @@ class PlantUmlUtils {
         /**
          * @return a plantuml representation of a [KParameter].
          */
-        fun KParameter.plantUml() = "${name}: ${type.jvmErasure.simpleName}"
+        fun KParameter.plantUml() = "$name: ${type.jvmErasure.simpleName}"
 
         /**
          * @return a plantuml string for representing a [KClass] type parameters.
@@ -122,7 +130,7 @@ class PlantUmlUtils {
             if (isAbstract && !isInterface) {
                 append("abstract ")
             }
-            if(isInterface) {
+            if (isInterface) {
                 append("interface ")
             } else {
                 append("class ")

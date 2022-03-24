@@ -1,14 +1,19 @@
 package io.github.kelvindev15.kotlin2plantuml.plantuml
 
 import io.github.classgraph.ClassGraph
-import io.github.kelvindev15.kotlin2plantuml.utils.PlantUmlUtils.Companion.canShow
-import io.github.kelvindev15.kotlin2plantuml.utils.PlantUmlUtils.Companion.isInterface
+import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils.Companion.isInterface
 import org.jgrapht.Graph
 import org.jgrapht.graph.DefaultDirectedGraph
 import kotlin.reflect.KClass
 import kotlin.reflect.full.superclasses
 
+/**
+ * A plantUML class hierarchy.
+ */
 class ClassHierarchy(
+    /**
+     * The root of hierarchy.
+     */
     val rootClass: KClass<*>,
     private val configuration: Configuration = Configuration(),
 ) : Graph<KClass<*>, PlantUmlRelationship> by DefaultDirectedGraph(PlantUmlRelationship::class.java) {
@@ -30,7 +35,7 @@ class ClassHierarchy(
                     it,
                     superclass,
                     PlantUmlRelationship(
-                        if(it.isInterface != superclass.isInterface) {
+                        if (it.isInterface != superclass.isInterface) {
                             RelationshipType.IMPLEMENTS
                         } else {
                             RelationshipType.IMPLEMENTS
@@ -41,7 +46,7 @@ class ClassHierarchy(
         }
     }
 
-    private fun entities() =  buildString {
+    private fun entities() = buildString {
         vertexSet()
             .forEach {
                 append(PlantUmlClass(it, configuration).plantUml())
@@ -70,8 +75,7 @@ class ClassHierarchy(
     fun plantUml(): String =
         if (configuration.recurse) {
             plantUmlHierarchy()
-        }
-        else {
+        } else {
             PlantUmlClass(rootClass, configuration).plantUml()
         }
 }

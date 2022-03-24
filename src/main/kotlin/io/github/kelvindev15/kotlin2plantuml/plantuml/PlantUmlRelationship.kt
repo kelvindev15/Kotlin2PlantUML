@@ -3,6 +3,9 @@ package io.github.kelvindev15.kotlin2plantuml.plantuml
 import org.jgrapht.graph.DefaultEdge
 import kotlin.reflect.KClass
 
+/**
+ * A plantUML relationship.
+ */
 class PlantUmlRelationship(
     private val relationshipType: RelationshipType,
 ) : DefaultEdge() {

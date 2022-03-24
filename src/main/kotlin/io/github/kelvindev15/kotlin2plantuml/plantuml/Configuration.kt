@@ -2,6 +2,9 @@ package io.github.kelvindev15.kotlin2plantuml.plantuml
 
 import kotlin.reflect.KVisibility
 
+/**
+ * The plantuml display configuration.
+ */
 data class Configuration(
     /**
      * If set to true, [PlantUmlClass] using this [Configuration]

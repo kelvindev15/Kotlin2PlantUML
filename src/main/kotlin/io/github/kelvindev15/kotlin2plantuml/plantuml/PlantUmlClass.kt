@@ -1,13 +1,16 @@
 package io.github.kelvindev15.kotlin2plantuml.plantuml
 
-import io.github.kelvindev15.kotlin2plantuml.utils.PlantUmlUtils.Companion.canShow
-import io.github.kelvindev15.kotlin2plantuml.utils.PlantUmlUtils.Companion.loadClassOrThrow
-import io.github.kelvindev15.kotlin2plantuml.utils.PlantUmlUtils.Companion.plantUml
+import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils.Companion.canShow
+import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils.Companion.loadClassOrThrow
+import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils.Companion.plantUml
 import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
 import kotlin.reflect.KProperty
 import kotlin.reflect.full.declaredMembers
 
+/**
+ * A plantUML class.
+ */
 class PlantUmlClass(
     private val classRef: KClass<*>,
     private val configuration: Configuration,
@@ -21,7 +24,7 @@ class PlantUmlClass(
         simpleClassName: String,
         packages: List<String> = listOf("io.github.kelvindev15.plantUmlGenerator.plantuml"),
         configuration: Configuration = Configuration(),
-    ) : this(loadClassOrThrow(packages,simpleClassName), configuration)
+    ) : this(loadClassOrThrow(packages, simpleClassName), configuration)
 
     /**
      * Returns [classRef]'s PlantUML string.
@@ -32,11 +35,11 @@ class PlantUmlClass(
         appendLine()
         classRef.declaredMembers.filter {
             it.visibility?.let { visibility ->
-                when(it) {
-                    is KFunction<*> -> !configuration.hideMethods
-                            && visibility.canShow(configuration.maxMethodVisibility)
-                    is KProperty<*> -> !configuration.hideFields
-                            && visibility.canShow(configuration.maxFieldVisibility)
+                when (it) {
+                    is KFunction<*> ->
+                        !configuration.hideMethods && visibility.canShow(configuration.maxMethodVisibility)
+                    is KProperty<*> ->
+                        !configuration.hideFields && visibility.canShow(configuration.maxFieldVisibility)
                     else -> false
                 }
             } ?: false

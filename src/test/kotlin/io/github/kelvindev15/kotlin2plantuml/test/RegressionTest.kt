@@ -7,7 +7,7 @@ import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import kotlin.reflect.KVisibility
 
-class RegressionTest() : FunSpec() {
+class RegressionTest : FunSpec() {
 
     private fun noCarriageReturn(text: String) = text.replace("\r", "")
 

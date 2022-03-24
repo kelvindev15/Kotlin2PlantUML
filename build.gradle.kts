@@ -1,6 +1,8 @@
 // TODO: Use val to uniform kotlin version
 plugins {
     kotlin("jvm") version "1.6.10"
+    id("org.danilopianini.publish-on-central") version "0.7.14"
+    id("org.danilopianini.gradle-kotlin-qa") version "0.13.0"
     java
     application
 }
