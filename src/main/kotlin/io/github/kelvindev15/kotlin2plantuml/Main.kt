@@ -3,48 +3,18 @@ package io.github.kelvindev15.kotlin2plantuml
 import io.github.kelvindev15.kotlin2plantuml.plantuml.ClassDiagram
 import io.github.kelvindev15.kotlin2plantuml.plantuml.Configuration
 import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils
+import org.apache.commons.cli.DefaultParser
+import org.apache.commons.cli.HelpFormatter
+import org.apache.commons.cli.Option
+import org.apache.commons.cli.Options
 import java.io.File
 import kotlin.reflect.KVisibility
+import kotlin.system.exitProcess
 
 /**
- * Returns the cli argument in [args] relative to any of passed [options].
- * If the none is found, null is returned.
+ * Tries to parse [option] to a [KVisibility].
  */
-fun getOption(args: Array<String>, vararg options: String): String? = options
-    .find { it in args }
-    ?.let {
-        args.elementAt(args.indexOf(it) + 1)
-    }
-
-/**
- * Gets the cli field visibility option from [args].
- */
-fun getFieldVisibility(args: Array<String>): KVisibility =
-    getOption(args, "-fv", "--field-visibility")?.let { KVisibility.values()[it.toInt()] } ?: KVisibility.PUBLIC
-
-/**
- * Gets the cli method visibility option from [args].
- */
-fun getMethodVisibility(args: Array<String>): KVisibility =
-    getOption(args, "-fm", "--method-visibility")?.let { KVisibility.values()[it.toInt()] } ?: KVisibility.PUBLIC
-
-/**
- * @return a list of packages passed al cli [args].
- */
-fun getPackages(args: Array<String>): List<String> =
-    getOption(args, "-p", "--packages")?.split(":") ?: emptyList()
-
-/**
- * Returns an instance of a run configuration based on cli [args].
- */
-fun toConfiguration(args: Array<String>): Configuration = Configuration(
-    hideFields = listOf("-hf", "--hide-fields").any { it in args },
-    hideMethods = listOf("-hm", "--hide-methods").any { it in args },
-    hideRelationships = listOf("-hr", "--hide-relationships").any { it in args },
-    recurse = listOf("-r", "--recurse").any { it in args },
-    maxFieldVisibility = getFieldVisibility(args),
-    maxMethodVisibility = getMethodVisibility(args),
-)
+fun toVisibility(option: String?) = option?.let { KVisibility.values()[it.toInt()] } ?: KVisibility.PUBLIC
 
 /**
  * ---------------------------------------------------
@@ -72,17 +42,63 @@ fun toConfiguration(args: Array<String>): Configuration = Configuration(
  * -mv, --method-visibility: max method visibility
  */
 fun main(args: Array<String>) {
+    val help = Option("h", "help", false, "Display this message")
+    val recurse = Option("r", "recurse", false, "Visit class class hierarchy")
+    val output = Option("o", "output", true, "Output file path")
+    val packages = Option("p", "packages", true, "':' separated packages (for subclasses)")
+    val hideFields = Option("hf", "hide-fields", false, "Hide fields on classes")
+    val hideMethods = Option("hm", "hide-methods", false, "Hide methods on classes")
+    val hideRelationships = Option("hr", "hide-relationships", false, "Hide relationships between classes")
+    val fieldVisibility = Option(
+        "fv",
+        "field-visibility",
+        true,
+        "Max. field visibility (0=Public, 1=Protected, 2=Internal, 3=Private)"
+    )
+    val methodVisibility = Option(
+        "mv",
+        "method-visibility",
+        true,
+        "Max. method visibility (0=Public, 1=Protected, 2=Internal, 3=Private)"
+    )
+    val options = Options()
+        .addOption(help)
+        .addOption(recurse)
+        .addOption(output)
+        .addOption(packages)
+        .addOption(hideFields)
+        .addOption(hideMethods)
+        .addOption(hideRelationships)
+        .addOption(fieldVisibility)
+        .addOption(methodVisibility)
+    val commandLine = DefaultParser().parse(options, args)
+    val configuration = Configuration(
+        hideFields = commandLine.hasOption(hideFields),
+        hideMethods = commandLine.hasOption(hideMethods),
+        hideRelationships = commandLine.hasOption(hideRelationships),
+        recurse = commandLine.hasOption(recurse),
+        maxFieldVisibility = toVisibility(commandLine.getOptionValue(fieldVisibility)),
+        maxMethodVisibility = toVisibility(commandLine.getOptionValue(methodVisibility)),
+    )
+    if (commandLine.hasOption(help)) {
+        HelpFormatter().printHelp("Kotlin2PlantUML", options)
+        exitProcess(0)
+    }
     require(args.isNotEmpty()) {
         "No fully qualified input class had been provided"
     }
-    val outputFile = getOption(args, "-o")
+    val outputFile = commandLine.getOptionValue(output)
         ?: "build${File.separatorChar}reports${File.separatorChar}diagram.plantuml"
     val clazz = ReflectUtils.loadClassOrThrow(args[0])
     File(outputFile).apply {
         parentFile.mkdirs()
         createNewFile()
         writeText(
-            ClassDiagram(clazz, scanPackages = getPackages(args), configuration = toConfiguration(args)).plantUml()
+            ClassDiagram(
+                clazz,
+                scanPackages = commandLine.getOptionValue(packages)?.split(":") ?: emptyList(),
+                configuration = configuration,
+            ).plantUml()
         )
     }
 }
