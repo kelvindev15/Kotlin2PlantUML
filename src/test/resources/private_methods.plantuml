@@ -3,31 +3,38 @@ interface Vehicle<T> {
     +{abstract} start(): Unit
     +{abstract} stop(): Unit
 }
+
 abstract class AbstractVehicle<T> {
     +{abstract} description(): String
     +start(): Unit
     +stop(): Unit
 }
-class Bicycle<T, P> {
+
+class Bicycle<T,\nP> {
     +description(): String
 }
-class Car<T : FourWheels<T, O, A>, O : Wheeled<T, O>, A : ComplexGeneric<T, O, A>> {
-    +bike: Bicycle
+
+class Car<T : FourWheels<T, O, A>,\nO : Wheeled<T, O>,\nA : ComplexGeneric<T, O, A>> {
+    +bike: Bicycle<T, O>
     +description(): String
     -privateMethod(): Unit
 }
-interface FourWheels<T, P, A> {
+
+interface FourWheels<T,\nP,\nA> {
 }
-interface TwoWheels<T, P> {
+
+interface TwoWheels<T,\nP> {
 }
-interface Wheeled<T, P> {
+
+interface Wheeled<T,\nP> {
 }
+
 Vehicle <|.. AbstractVehicle
-AbstractVehicle <|.. Bicycle
+AbstractVehicle <|-- Bicycle
 TwoWheels <|.. Bicycle
-AbstractVehicle <|.. Car
+AbstractVehicle <|-- Car
 FourWheels <|.. Car
-Wheeled <|.. FourWheels
-Wheeled <|.. TwoWheels
-Vehicle <|.. Wheeled
+Wheeled <|-- FourWheels
+Wheeled <|-- TwoWheels
+Vehicle <|-- Wheeled
 @enduml

@@ -1,0 +1,6 @@
+@startuml
+interface Vehicle<T> {
+    +{abstract} start(): Unit
+    +{abstract} stop(): Unit
+}
+@enduml
