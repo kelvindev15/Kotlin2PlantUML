@@ -4,11 +4,11 @@ import kotlin.reflect.KCallable
 import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
 import kotlin.reflect.KParameter
+import kotlin.reflect.KType
 import kotlin.reflect.KTypeParameter
 import kotlin.reflect.KVisibility
 import kotlin.reflect.full.createType
 import kotlin.reflect.full.valueParameters
-import kotlin.reflect.jvm.javaType
 import kotlin.reflect.jvm.jvmErasure
 
 /**
@@ -16,10 +16,6 @@ import kotlin.reflect.jvm.jvmErasure
  */
 class ReflectUtils private constructor() {
     companion object {
-        /**
-         * Tries to load a [fullyQualifiedClass].
-         * @return null if the class is not found.
-         */
         private fun loadClassOrNull(fullyQualifiedClass: String): KClass<*>? {
             var result: KClass<*>? = null
             try {
@@ -78,7 +74,7 @@ class ReflectUtils private constructor() {
                 append(valueParameters.joinToString(prefix = "(", separator = ", ", postfix = ")") { it.plantUml() })
             }
             append(": ")
-            append(returnType.jvmErasure.simpleName)
+            append(returnType.plantUml())
         }
 
         /**
@@ -87,34 +83,22 @@ class ReflectUtils private constructor() {
         fun KParameter.plantUml() = "$name: ${type.jvmErasure.simpleName}"
 
         /**
-         * @return a plantuml string for representing a [KClass] type parameters.
-         */
-        fun List<KTypeParameter>.plantUml(): String =
-            if (isNotEmpty())
-                joinToString(prefix = "<", separator = ", ", postfix = ">") { it.plantUml() }
-            else ""
-
-        /**
          * @return a plantuml representation o [KTypeParameter].
          */
         fun KTypeParameter.plantUml(): String = buildString {
-            this@plantUml.upperBounds.minus(Any::class.createType(nullable = true)).let {
-                if (it.isNotEmpty()) {
-                    append("${this@plantUml.name} : ")
-                    it.forEach { t ->
-                        append(t.jvmErasure.simpleName)
-                        val args = t.arguments.mapNotNull { a -> a.type }
-                        if (args.isNotEmpty()) {
-                            append(
-                                args.joinToString(prefix = "<", postfix = ">") { b ->
-                                    loadClassOrNull(b.javaType.typeName)
-                                        ?.plantUml()
-                                        ?: b.javaType.typeName
-                                }
-                            )
-                        }
-                    }
-                } else append(this@plantUml.name)
+            val upperBounds = this@plantUml.upperBounds.minus(Any::class.createType(nullable = true))
+            if (upperBounds.isNotEmpty()) {
+                append(upperBounds.joinToString(separator = ",\\n") { "${this@plantUml.name} : ${it.plantUml()}" })
+            } else append(this@plantUml.name)
+        }
+
+        /**
+         * PlantUml representation of [KType].
+         */
+        fun KType.plantUml() = buildString {
+            append(jvmErasure.simpleName)
+            if (arguments.isNotEmpty()) {
+                append(arguments.joinToString(prefix = "<", postfix = ">") { it.toString().substringAfterLast(".") })
             }
         }
 
@@ -136,7 +120,9 @@ class ReflectUtils private constructor() {
                 append("class ")
             }
             append(simpleName)
-            append(typeParameters.plantUml())
+            if (typeParameters.isNotEmpty()) {
+                append(typeParameters.joinToString(prefix = "<", separator = ",\\n", postfix = ">") { it.plantUml() })
+            }
         }
     }
 }

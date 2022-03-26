@@ -17,13 +17,22 @@ fun getOption(args: Array<String>, vararg options: String): String? = options
     }
 
 /**
- * Gets the cli visibility option for [args].
+ * Gets the cli field visibility option from [args].
  */
-fun getVisibilityOption(args: Array<String>): KVisibility =
+fun getFieldVisibility(args: Array<String>): KVisibility =
     getOption(args, "-fv", "--field-visibility")?.let { KVisibility.values()[it.toInt()] } ?: KVisibility.PUBLIC
 
-fun getPackagesList(args: Array<String>) : List<String> =
-    getOption(args, "-p", "--packages")?.let { it.split(":") } ?: emptyList()
+/**
+ * Gets the cli method visibility option from [args].
+ */
+fun getMethodVisibility(args: Array<String>): KVisibility =
+    getOption(args, "-fm", "--method-visibility")?.let { KVisibility.values()[it.toInt()] } ?: KVisibility.PUBLIC
+
+/**
+ * @return a list of packages passed al cli [args].
+ */
+fun getPackages(args: Array<String>): List<String> =
+    getOption(args, "-p", "--packages")?.split(":") ?: emptyList()
 
 /**
  * Returns an instance of a run configuration based on cli [args].
@@ -33,8 +42,8 @@ fun toConfiguration(args: Array<String>): Configuration = Configuration(
     hideMethods = listOf("-hm", "--hide-methods").any { it in args },
     hideRelationships = listOf("-hr", "--hide-relationships").any { it in args },
     recurse = listOf("-r", "--recurse").any { it in args },
-    maxFieldVisibility = getVisibilityOption(args),
-    maxMethodVisibility = getVisibilityOption(args),
+    maxFieldVisibility = getFieldVisibility(args),
+    maxMethodVisibility = getMethodVisibility(args),
 )
 
 /**
@@ -72,6 +81,8 @@ fun main(args: Array<String>) {
     File(outputFile).apply {
         parentFile.mkdirs()
         createNewFile()
-        writeText(ClassDiagram(clazz, scanPackages = getPackagesList(args), configuration = toConfiguration(args)).plantUml())
+        writeText(
+            ClassDiagram(clazz, scanPackages = getPackages(args), configuration = toConfiguration(args)).plantUml()
+        )
     }
 }

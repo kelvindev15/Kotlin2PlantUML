@@ -1,9 +1,11 @@
 [versions]
 alchemist = "14.0.0"
+kotlin = "1.6.10"
 
 [libraries]
 alchemist = { module = "it.unibo.alchemist:alchemist", version.ref = "alchemist" }
 alchemist-full = { module = "it.unibo.alchemist:alchemist-full", version.ref = "alchemist" }
+kotlin-reflekt = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 
 [bundles]
 alchemist = [

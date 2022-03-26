@@ -5,6 +5,7 @@ import io.github.kelvindev15.kotlin2plantuml.plantuml.Configuration
 import io.github.kelvindev15.kotlin2plantuml.test.sample.Vehicle
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
+import java.io.File
 import kotlin.reflect.KVisibility
 
 class RegressionTest : FunSpec() {
@@ -19,10 +20,10 @@ class RegressionTest : FunSpec() {
             comparePlantUml(ClassDiagram(Vehicle::class).plantUml(), "default_configuration.plantuml")
         }
 
-        test("recursive") {
+        test("no recurse") {
             comparePlantUml(
-                ClassDiagram(Vehicle::class, configuration = Configuration(recurse = true)).plantUml(),
-                "recursive.plantuml"
+                ClassDiagram(Vehicle::class, configuration = Configuration(recurse = false)).plantUml(),
+                "no_recurse.plantuml"
             )
         }
 

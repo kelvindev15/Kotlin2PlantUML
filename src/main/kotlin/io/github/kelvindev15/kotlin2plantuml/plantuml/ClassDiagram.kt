@@ -23,6 +23,6 @@ class ClassDiagram(
         roots.distinct().forEach {
             append(it.plantUml())
         }
-        append("@enduml")
+        append("@enduml\n")
     }
 }

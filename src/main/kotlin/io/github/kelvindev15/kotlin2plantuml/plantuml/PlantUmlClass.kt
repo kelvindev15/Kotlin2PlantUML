@@ -47,6 +47,6 @@ class PlantUmlClass(
             append("    ${it.plantUml()}")
             appendLine()
         }
-        append("}")
+        append("}\n")
     }
 }
