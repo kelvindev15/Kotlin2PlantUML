@@ -5,7 +5,6 @@ import io.github.kelvindev15.kotlin2plantuml.plantuml.Configuration
 import io.github.kelvindev15.kotlin2plantuml.test.sample.Vehicle
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
-import java.io.File
 import kotlin.reflect.KVisibility
 
 class RegressionTest : FunSpec() {
