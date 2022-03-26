@@ -32,17 +32,12 @@ class ClassHierarchy(
         // GRAPH EDGES
         vertexSet().forEach {
             it.superclasses.filter { c -> c != Any::class && c in vertexSet() }.forEach { superclass ->
-                addEdge(
-                    it,
-                    superclass,
-                    PlantUmlRelationship(
-                        if (it.isInterface != superclass.isInterface) {
-                            RelationshipType.IMPLEMENTS
-                        } else {
-                            RelationshipType.EXTENDS
-                        }
-                    )
-                )
+                val relationshipType = if (it.isInterface != superclass.isInterface) {
+                    RelationshipType.IMPLEMENTS
+                } else {
+                    RelationshipType.EXTENDS
+                }
+                addEdge(it, superclass, PlantUmlRelationship(relationshipType))
             }
         }
     }
