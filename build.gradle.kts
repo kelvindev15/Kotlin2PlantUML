@@ -29,6 +29,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
     implementation("org.jgrapht:jgrapht-core:1.5.1")
     implementation("io.github.classgraph:classgraph:4.8.141")
+    implementation("commons-cli:commons-cli:1.5.0")
     implementation(libs.bundles.alchemist)
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
