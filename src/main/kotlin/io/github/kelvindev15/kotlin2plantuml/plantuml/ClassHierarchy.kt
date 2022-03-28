@@ -31,7 +31,7 @@ class ClassHierarchy(
         }.loadClasses().forEach { addVertex(it.kotlin) }
         // GRAPH EDGES
         vertexSet().forEach {
-            it.superclasses.filter { c -> c != Any::class && c in vertexSet() }.forEach { superclass ->
+            it.superclasses.filter { c -> c in vertexSet() }.forEach { superclass ->
                 val relationshipType = if (it.isInterface != superclass.isInterface) {
                     RelationshipType.IMPLEMENTS
                 } else {
