@@ -2,7 +2,7 @@
 plugins {
     kotlin("jvm") version "1.6.10"
     id("org.danilopianini.gradle-kotlin-qa") version "0.13.0"
-    id ("org.danilopianini.publish-on-central") version "0.7.15"
+    id("org.danilopianini.publish-on-central") version "0.7.15"
     id("org.jetbrains.dokka") version "1.6.10"
     java
     application
