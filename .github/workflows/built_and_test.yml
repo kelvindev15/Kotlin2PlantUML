@@ -37,10 +37,6 @@ jobs:
       group: ${{ github.workflow }}-test-deploy-${{ github.event.number || github.ref }}
       cancel-in-progress: true
     steps:
-      - name: deleteme
-        run: |
-          echo ${{ secrets.MAVEN_CENTRAL_USERNAME }}
-          echo provaaaa
       - name: Checkout
         uses: danysk/action-checkout@0.2.1
       - uses: DanySK/build-check-deploy-gradle-action@1.2.9
