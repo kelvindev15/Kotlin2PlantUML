@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "io.github.kelvindev15"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 application {
     mainClass.set("$group.kotlin2plantuml.MainKt")
