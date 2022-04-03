@@ -1,4 +1,4 @@
-// TODO: Use val to uniform kotlin version
+// TODO: Use toml file for dependencies
 plugins {
     kotlin("jvm") version "1.6.10"
     id("org.danilopianini.gradle-kotlin-qa") version "0.13.0"
@@ -30,7 +30,6 @@ dependencies {
     implementation("org.jgrapht:jgrapht-core:1.5.1")
     implementation("io.github.classgraph:classgraph:4.8.141")
     implementation("commons-cli:commons-cli:1.5.0")
-    implementation(libs.bundles.alchemist)
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
     testImplementation("io.kotest:kotest-property:$kotestVersion")
