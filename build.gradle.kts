@@ -2,6 +2,8 @@
 plugins {
     kotlin("jvm") version "1.6.10"
     id("org.danilopianini.gradle-kotlin-qa") version "0.13.0"
+    id ("org.danilopianini.publish-on-central") version "0.7.15"
+    id("org.jetbrains.dokka") version "1.6.10"
     java
     application
 }
@@ -35,6 +37,49 @@ dependencies {
     testImplementation("io.kotest:kotest-property:$kotestVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+}
+
+val githubUser = "Kelvindev15"
+
+if (System.getenv("CI") == true.toString()) {
+    signing {
+        val signingKey: String? by project
+        val signingPassword: String? by project
+        useInMemoryPgpKeys(signingKey, signingPassword)
+    }
+}
+
+publishOnCentral {
+    configureMavenCentral.set(true)
+    projectDescription.set("A kotlin library for generating plantuml from kotlin code.")
+    projectLongName.set(project.name)
+    licenseName.set("Apache License, Version 2.0")
+    licenseUrl.set("http://www.apache.org/licenses/LICENSE-2.0")
+    projectUrl.set("https://github.com/$githubUser/${project.name}")
+    scmConnection.set("git:git@github.com:$githubUser/${project.name}")
+    repository("https://maven.pkg.github.com/$githubUser/${project.name}", "GitHub") {
+        user.set(System.getenv("GITHUB_USERNAME"))
+        password.set(System.getenv("GITHUB_TOKEN"))
+    }
+}
+
+/*
+ * Developers and contributors must be added manually
+ */
+publishing {
+    publications {
+        withType<MavenPublication> {
+            pom {
+                developers {
+                    developer {
+                        name.set("Kelvin Olaiya")
+                        email.set("kelvinoluwada.olaiya@studio.unibo.it")
+                        url.set("https://kelvin-olaiya.github.io")
+                    }
+                }
+            }
+        }
+    }
 }
 
 tasks.getByName<Test>("test") {
