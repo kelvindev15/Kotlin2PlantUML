@@ -29,4 +29,3 @@ jobs:
         with:
           build_command: 'true'
           should-run-codecov: ${{ contains('Linux', runner.os) }}
-          clean-command: 'true'
