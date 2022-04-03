@@ -29,3 +29,25 @@ jobs:
         with:
           build_command: 'true'
           should-run-codecov: ${{ contains('Linux', runner.os) }}
+  test-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    if: contains(github.repository, 'Kotlin2PlantUML') && contains('push workflow_dispatch', github.event_name)
+    concurrency:
+      group: ${{ github.workflow }}-test-deploy-${{ github.event.number || github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout
+        uses: danysk/action-checkout@0.2.1
+      - uses: DanySK/build-check-deploy-gradle-action@1.2.9
+        with:
+          build-command: true
+          check-command: true
+          deploy-command: ./gradlew closeKotlinMavenOnMavenCentralNexus --parallel
+          java-version: 11
+          should-run-codecov: false
+          should-deploy: true
+          should-validate-wrapper: false
+          maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          signing-key: ${{ secrets.SIGNING_KEY }}
+          signing-password: ${{ secrets.SIGNING_PASSWORD }}
