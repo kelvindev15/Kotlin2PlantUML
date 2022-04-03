@@ -1,7 +1,6 @@
 name: CI
 on:
   push:
-    tags: '*'
     paths-ignore:
       - 'CHANGELOG.md'
       - '.gitignore'
