@@ -31,7 +31,7 @@ repositories {
 val kotestVersion = "5.2.1"
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.20")
     implementation("org.jgrapht:jgrapht-core:1.5.1")
     implementation("io.github.classgraph:classgraph:4.8.145")
     implementation("commons-cli:commons-cli:1.5.0")
