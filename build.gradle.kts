@@ -28,7 +28,7 @@ repositories {
     }
 }
 
-val kotestVersion = "5.2.1"
+val kotestVersion = "5.2.3"
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.20")
