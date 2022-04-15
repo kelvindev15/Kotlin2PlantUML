@@ -3,7 +3,7 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 // TODO: Use toml file for dependencies
 plugins {
     kotlin("jvm") version "1.6.20"
-    id("org.danilopianini.gradle-kotlin-qa") version "0.13.0"
+    id("org.danilopianini.gradle-kotlin-qa") version "0.16.0"
     id("org.danilopianini.publish-on-central") version "0.7.17"
     id("org.jetbrains.dokka") version "1.6.20"
     id("com.github.johnrengelman.shadow") version "7.1.2"
