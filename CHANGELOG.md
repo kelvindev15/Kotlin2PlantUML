@@ -1,3 +1,10 @@
+### [2.0.3](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.2...2.0.3) (2022-04-16)
+
+
+### Bug Fixes
+
+* **actions:** don't specify version explicitly ([799b339](https://github.com/kelvindev15/Kotlin2PlantUML/commit/799b3393da850fe33dee8336664c8e79ee0ccc57))
+
 ### [2.0.2](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.1...2.0.2) (2022-04-16)
 
 
