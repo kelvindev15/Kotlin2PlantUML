@@ -1,20 +1,20 @@
 # Kotlin2PlantUML
 
 This library allows you to obtain a plantuml class diagram directly from your Kotlin (and Java)
-code base. You can either obtain a simple class uml representation or the hierarchy of a root class.
+code base. You can either generate a simple class uml representation or the hierarchy of a root class.
 
 ## Usage
 
 ### Command line
 
 ---------------------------------------------------
-One way to generate your PlantUML class diagram is by executing the jar file.
+One way to generate a PlantUML class diagram is by executing the jar file.
 Arguments can be passed with the following structure:
 
  ```bash
 java -jar kotlin2plantuml.jar fullyQualifiedClass [...options]
  ```
-At least one argument must be passed. The first argument must a ***fully qualified***
+At least one argument must be passed. The first argument must be a ***fully qualified***
 class name, otherwise an error will be thrown.
 
 > ***Note***: The library uses the system ClassLoader to load classes thus only classes available in the
@@ -31,7 +31,7 @@ java -jar kotlin2plantuml.jar --help
 ```
 Here's the output of the ***help*** command:
 ```text
-usage: Kotlin2PlantUML
+usage: java -jar kotlin2plantuml.jar full.class.name [...options]
  -fv,--field-visibility <arg>    Max. field visibility (0=Public,
                                  1=Protected, 2=Internal, 3=Private)
  -h,--help                       Display this message

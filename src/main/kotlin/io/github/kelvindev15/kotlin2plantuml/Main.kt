@@ -81,7 +81,7 @@ fun main(args: Array<String>) {
         maxMethodVisibility = toVisibility(commandLine.getOptionValue(methodVisibility)),
     )
     if (commandLine.hasOption(help)) {
-        HelpFormatter().printHelp("Kotlin2PlantUML", options)
+        HelpFormatter().printHelp("java -jar kotlin2plantuml.jar full.class.name [...options]", options)
         exitProcess(0)
     }
     require(args.isNotEmpty()) {
