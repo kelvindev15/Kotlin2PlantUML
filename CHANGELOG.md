@@ -1,3 +1,10 @@
+### [2.0.2](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.1...2.0.2) (2022-04-16)
+
+
+### Bug Fixes
+
+* **actions:** set concurrency constraint in release ([e3bbdf5](https://github.com/kelvindev15/Kotlin2PlantUML/commit/e3bbdf53107dc577fc39658ec3e9bcff41adb6f4))
+
 ### [2.0.1](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.0...2.0.1) (2022-04-16)
 
 
