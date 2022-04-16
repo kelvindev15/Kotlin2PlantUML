@@ -9,7 +9,6 @@ on:
       - master
   workflow_dispatch:
 
-
 jobs:
   # Runs all tests
   build:
@@ -49,6 +48,35 @@ jobs:
           should-deploy: true
           should-validate-wrapper: false
           maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          signing-key: ${{ secrets.SIGNING_KEY }}
+          signing-password: ${{ secrets.SIGNING_PASSWORD }}
+  release:
+    needs:
+      - build
+      - test-deploy
+    runs-on: ubuntu-latest
+    if: >-
+      contains('push workflow_dispatch', github.event_name)
+      && contains(github.repository, 'Kelvindev15/Kotlin2PlantUML')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.0.1
+        with:
+          submodules: recursive
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
+      - uses: DanySK/build-check-deploy-gradle-action@1.2.12
+        with:
+          java-version: 11
+          build-command: true
+          check-command: true
+          deploy-command: |
+            npm install
+            npx semantic-release
+          should-run-codecov: false
+          should-deploy: true
+          should-validate-wrapper: false
+          github-token: ${{ secrets.DEPLOYMENT_TOKEN }}
           maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
           signing-key: ${{ secrets.SIGNING_KEY }}
           signing-password: ${{ secrets.SIGNING_PASSWORD }}
