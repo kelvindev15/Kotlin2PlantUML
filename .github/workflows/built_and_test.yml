@@ -52,6 +52,9 @@ jobs:
           signing-key: ${{ secrets.SIGNING_KEY }}
           signing-password: ${{ secrets.SIGNING_PASSWORD }}
   release:
+    concurrency:
+      # Only one release job at a time. Strictly sequential.
+      group: release
     needs:
       - build
       - test-deploy
