@@ -1,3 +1,10 @@
+### [2.0.1](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.0...2.0.1) (2022-04-16)
+
+
+### Bug Fixes
+
+* **actions:** override maven username ([4661aa7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4661aa7aafd0cc883704dcd451a4abe6647e9fc5))
+
 ## [2.0.0](https://github.com/kelvindev15/Kotlin2PlantUML/compare/1.0.0...2.0.0) (2022-04-16)
 
 
