@@ -60,7 +60,7 @@ publishOnCentral {
     projectUrl.set("https://github.com/$githubUser/${project.name}")
     scmConnection.set("git:git@github.com:$githubUser/${project.name}")
     repository("https://maven.pkg.github.com/$githubUser/${project.name}", "GitHub") {
-        user.set(System.getenv("GITHUB_USERNAME"))
+        user.set(System.getenv("kelvin-olaiya"))
         password.set(System.getenv("GITHUB_TOKEN"))
     }
 }
