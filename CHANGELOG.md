@@ -1,3 +1,11 @@
+### [2.0.4](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.3...2.0.4) (2022-04-16)
+
+
+### Bug Fixes
+
+* **ci:** directly write username in build file ([785781e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/785781ecd33e72737ff4dd78892658d39f166e88))
+* **ci:** write github username ([6c372c6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6c372c620fa2e359faa7bebdbf70d010e1da4c4b))
+
 ### [2.0.3](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.2...2.0.3) (2022-04-16)
 
 
