@@ -1,3 +1,19 @@
+## [2.0.0](https://github.com/kelvindev15/Kotlin2PlantUML/compare/1.0.0...2.0.0) (2022-04-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* cheat commit to trigger a new version release
+
+### Refactoring
+
+* cheat commit to trigger a new version release ([4772ace](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4772ace8ea0742d27bc8c85b1f438044128df21b))
+
+
+### General maintenance
+
+* merge origin ([d5c2e15](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d5c2e15c9bc1b2feb0afb3daa9e2ec339b24f645))
+
 ## 1.0.0 (2022-04-16)
 
 
