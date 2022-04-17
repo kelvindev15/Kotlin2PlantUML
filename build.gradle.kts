@@ -1,12 +1,11 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
-// TODO: Use toml file for dependencies
 plugins {
-    kotlin("jvm") version "1.6.20"
-    id("org.danilopianini.gradle-kotlin-qa") version "0.16.0"
-    id("org.danilopianini.publish-on-central") version "0.7.17"
-    id("org.jetbrains.dokka") version "1.6.20"
-    id("com.github.johnrengelman.shadow") version "7.1.2"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.qa)
+    alias(libs.plugins.publicOnCentral)
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.shadowJar)
     java
     application
 }
@@ -27,18 +26,15 @@ repositories {
     }
 }
 
-val kotestVersion = "5.2.3"
 dependencies {
-    implementation(kotlin("stdlib"))
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.20")
-    implementation("org.jgrapht:jgrapht-core:1.5.1")
-    implementation("io.github.classgraph:classgraph:4.8.146")
-    implementation("commons-cli:commons-cli:1.5.0")
-    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
-    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
-    testImplementation("io.kotest:kotest-property:$kotestVersion")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    implementation(libs.bundles.kotlin)
+    implementation(libs.jGraph)
+    implementation(libs.classgraph)
+    implementation(libs.common.cli)
+    /* Test */
+    testImplementation(libs.bundles.kotest)
+    testImplementation(libs.junit.jupiter.api)
+    testRuntimeOnly(libs.junit.jupiter.engine)
 }
 
 val githubUser = "Kelvindev15"
