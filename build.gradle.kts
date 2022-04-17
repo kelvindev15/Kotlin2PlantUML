@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.publicOnCentral)
     alias(libs.plugins.dokka)
     alias(libs.plugins.shadowJar)
+    alias(libs.plugins.semanticVersioning)
     java
     application
 }
@@ -45,6 +46,21 @@ if (System.getenv("CI") == true.toString()) {
         val signingPassword: String? by project
         useInMemoryPgpKeys(signingKey, signingPassword)
     }
+}
+
+gitSemVer {
+    minimumVersion.set("0.1.0")
+    developmentIdentifier.set("dev")
+    noTagIdentifier.set("archeo")
+    fullHash.set(false) // set to true if you want to use the full git hash
+    maxVersionLength.set(Int.MAX_VALUE) // Useful to limit the maximum version length, e.g. Gradle Plugins have a limit on 20
+    developmentCounterLength.set(2) // How many digits after `dev`
+    enforceSemanticVersioning.set(true) // Whether the plugin should stop if the resulting version is not a valid SemVer, or just warn
+    preReleaseSeparator.set("-")
+    buildMetadataSeparator.set("+")
+    distanceCounterRadix.set(36) // The radix for the commit-distance counter. Must be in the 2-36 range.
+    versionPrefix.set("")
+    assignGitSemanticVersion()
 }
 
 publishOnCentral {
