@@ -8,7 +8,7 @@ code base. You can either generate a simple class uml representation or the hier
 ### Command line
 
 ---------------------------------------------------
-One way to generate a PlantUML class diagram is by executing the jar file.
+One way to generate a PlantUML class diagram is by executing the [jar file](https://github.com/kelvindev15/Kotlin2PlantUML/releases/download/latest/kotlin2plantuml.jar).
 Arguments can be passed with the following structure:
 
  ```bash
@@ -64,7 +64,7 @@ java -jar kotlin2plantuml.jar my.fully.qualified.Class --output ./path/to/file.p
 Another possibility is to import the library into a gradle project.
 Just add this to your build file:
 ```kotlin
-implementation("io.github.kelvindev15:Kotlin2PlantUML:1.0.0")
+implementation("io.github.kelvindev15:Kotlin2PlantUML:<latest-version>")
 ```
 and you're good to go. Now you can freely use the library API. Here's an example:
 
