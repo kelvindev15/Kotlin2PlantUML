@@ -8,7 +8,8 @@ code base. You can either generate a simple class uml representation or the hier
 ### Command line
 
 ---------------------------------------------------
-One way to generate a PlantUML class diagram is by executing the [jar file](https://github.com/kelvindev15/Kotlin2PlantUML/releases/download/latest/kotlin2plantuml.jar).
+One way to generate a PlantUML class diagram is by executing 
+the [jar file](https://github.com/kelvindev15/Kotlin2PlantUML/releases/latest/download/kotlin2plantuml.jar).
 Arguments can be passed with the following structure:
 
  ```bash
