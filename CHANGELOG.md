@@ -1,3 +1,41 @@
+## [2.0.0](https://github.com/kelvindev15/Kotlin2PlantUML/compare/1.0.0...2.0.0) (2022-04-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* cheat commit to trigger a new version release
+
+### Bug Fixes
+
+* **actions:** don't specify version explicitly ([799b339](https://github.com/kelvindev15/Kotlin2PlantUML/commit/799b3393da850fe33dee8336664c8e79ee0ccc57))
+* **actions:** override maven username ([4661aa7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4661aa7aafd0cc883704dcd451a4abe6647e9fc5))
+* **actions:** set concurrency constraint in release ([e3bbdf5](https://github.com/kelvindev15/Kotlin2PlantUML/commit/e3bbdf53107dc577fc39658ec3e9bcff41adb6f4))
+* **ci:** directly write username in build file ([785781e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/785781ecd33e72737ff4dd78892658d39f166e88))
+* **ci:** write github username ([6c372c6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6c372c620fa2e359faa7bebdbf70d010e1da4c4b))
+* trigger a new release ([f8b7535](https://github.com/kelvindev15/Kotlin2PlantUML/commit/f8b75356020a105e755a03300efcaae8e8be5ca3))
+
+
+### Refactoring
+
+* cheat commit to trigger a new version release ([4772ace](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4772ace8ea0742d27bc8c85b1f438044128df21b))
+* move dependencies to toml file ([a489a7e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a489a7e9a3903371a539aa1806ce992d9ce35bb8))
+
+
+### General maintenance
+
+* **build:** add semantic versioning and conventional commit git hook ([f670d24](https://github.com/kelvindev15/Kotlin2PlantUML/commit/f670d2482dd774655303050fc2189e4d06ccb335))
+* merge origin ([d5c2e15](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d5c2e15c9bc1b2feb0afb3daa9e2ec339b24f645))
+* **release:** 2.0.0 [skip ci] ([87d10ee](https://github.com/kelvindev15/Kotlin2PlantUML/commit/87d10ee6ffaeddc0cce53a531bf0f74874f1167a))
+* **release:** 2.0.1 [skip ci] ([9276aca](https://github.com/kelvindev15/Kotlin2PlantUML/commit/9276aca58a4107f93c2d74a49ae8c161a6756a15))
+* **release:** 2.0.2 [skip ci] ([4c54680](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4c54680e4eb093eea34fbd88173919d31c419399))
+* **release:** 2.0.3 [skip ci] ([45fbdbf](https://github.com/kelvindev15/Kotlin2PlantUML/commit/45fbdbfc7f89be5fb48298fb5dd1a0603ab3e80d))
+* **release:** 2.0.4 [skip ci] ([1d27ad6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/1d27ad6155e30ac6b4371ec5b00263c14969c9c7))
+
+
+### Dependency updates
+
+* **deps:** update plugin kotlin-jvm to v1.6.21 ([61600dd](https://github.com/kelvindev15/Kotlin2PlantUML/commit/61600dd37dae783fbd4470ccb01a83071ea37617))
+
 ### [2.0.4](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.3...2.0.4) (2022-04-16)
 
 
