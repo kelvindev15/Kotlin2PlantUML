@@ -91,7 +91,7 @@ fun main(args: Array<String>) {
         ?: "build${File.separatorChar}reports${File.separatorChar}diagram.plantuml"
     val clazz = ReflectUtils.loadClassOrThrow(args[0])
     File(outputFile).apply {
-        parentFile.mkdirs()
+        parentFile?.mkdirs()
         createNewFile()
         writeText(
             ClassDiagram(
