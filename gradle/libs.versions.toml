@@ -5,6 +5,7 @@ kotest = "5.3.0"
 jUnit = "5.8.2"
 
 [libraries]
+alchemist = { module = "it.unibo.alchemist:alchemist-full", version.ref = "alchemist" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotest-runner = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }

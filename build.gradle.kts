@@ -32,6 +32,7 @@ dependencies {
     implementation(libs.jGraph)
     implementation(libs.classgraph)
     implementation(libs.common.cli)
+    implementation(libs.alchemist)
     /* Test */
     testImplementation(libs.bundles.kotest)
     testImplementation(libs.junit.jupiter.api)
