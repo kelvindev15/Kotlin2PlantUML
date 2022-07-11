@@ -2,7 +2,7 @@ var publishCmd = `
 git tag -a -f \${nextRelease.version} \${nextRelease.version} -F CHANGELOG.md
 git push --force origin \${nextRelease.version} || exit 6
 ./gradlew shadowJar --parallel || ./gradlew shadowJar --parallel || exit 4
-./gradlew releaseKotlinMavenOnMavenCentralNexus --parallel || exit 5
+./gradlew publishAllPublicationsToMavenCentralRepository releaseStagingRepositoryOnMavenCentral --parallel || exit 5
 ./gradlew publishKotlinMavenPublicationToGithubRepository --continue || true
 `
 var config = require('semantic-release-preconfigured-conventional-commits');
