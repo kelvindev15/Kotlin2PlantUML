@@ -2,7 +2,7 @@
 alchemist = "17.0.2"
 kotlin = "1.7.10"
 kotest = "5.4.0"
-jUnit = "5.8.2"
+jUnit = "5.9.0"
 
 [libraries]
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
