@@ -1,3 +1,58 @@
+## [2.0.2](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.1...2.0.2) (2022-07-27)
+
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.9.0 ([e5d7423](https://github.com/kelvindev15/Kotlin2PlantUML/commit/e5d7423b72ad1b039c7dc4066983cc27bf9e8649))
+
+
+### General maintenance
+
+* **readme:** add CI badge ([3d676aa](https://github.com/kelvindev15/Kotlin2PlantUML/commit/3d676aa900280d33e82b87154d37bfaad4cce0f3))
+* **readme:** add javadoc reference ([5b8124a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5b8124a199dd7a0f4ba01dc123e7577a57a95ad9))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.15 ([6c2c405](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6c2c4054fb4cda3d04c8b00c85592b029bd87c3d))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.16 ([46451df](https://github.com/kelvindev15/Kotlin2PlantUML/commit/46451dfd4034f3791851c265e2ae389e208394ec))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2 ([08a1d1d](https://github.com/kelvindev15/Kotlin2PlantUML/commit/08a1d1d0e727ecd17e5b05bb82230fe5dde34dc0))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.0.1 ([c117ba7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/c117ba77685afbbaad99739c41aef6a01df3e562))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.0.2 ([5f505d6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5f505d6c0496b2746f8711fcec5561c46746c48b))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.0 ([16c3c28](https://github.com/kelvindev15/Kotlin2PlantUML/commit/16c3c28a8c3e923e58e34bd3e3296871e210c42a))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.1 ([68f5607](https://github.com/kelvindev15/Kotlin2PlantUML/commit/68f560704dfd90298f3367fbc85b9c83e62dfa40))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.2 ([692c831](https://github.com/kelvindev15/Kotlin2PlantUML/commit/692c831e1bd774b64ab5bbfa5c02d42c923b2c44))
+* **deps:** update dependency gradle to v7.5 ([aff56ef](https://github.com/kelvindev15/Kotlin2PlantUML/commit/aff56efb07daa54e0c06d293a343174b149f5946))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.147 ([3e3f734](https://github.com/kelvindev15/Kotlin2PlantUML/commit/3e3f73457ca147b1535e072eba61e70f08e36aca))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.148 ([a868239](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a868239cf660d285efb4331030c556dc2fd131d4))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.149 ([89c2bee](https://github.com/kelvindev15/Kotlin2PlantUML/commit/89c2bee308daa9db313471bf733f02fe8b60984a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.7 ([eabf13b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/eabf13bd11ee9801b35f81e819e33c48abb3fbf1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.8 ([4e8276f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4e8276f868530aea112c8e1ce7928d43f4c91713))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.9 ([a94af59](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a94af597dbfeb5a1b733224d9cce988b508d3c15))
+* **deps:** update kotest to v5.3.1 ([2e73c38](https://github.com/kelvindev15/Kotlin2PlantUML/commit/2e73c3871c9435a44ad3a2b05c84e9564858e111))
+* **deps:** update kotest to v5.3.2 ([1e0e857](https://github.com/kelvindev15/Kotlin2PlantUML/commit/1e0e8570e3f5867ea23ac4c317d50e42fe5a63f9))
+* **deps:** update kotest to v5.4.0 ([8498b59](https://github.com/kelvindev15/Kotlin2PlantUML/commit/8498b590a16359f824535cdd7984c91f8946f55e))
+* **deps:** update kotlin to v1.7.0 ([78e7c04](https://github.com/kelvindev15/Kotlin2PlantUML/commit/78e7c046ac044a8be56980c2be35fb2ede8cd8b0))
+* **deps:** update kotlin to v1.7.10 ([47453de](https://github.com/kelvindev15/Kotlin2PlantUML/commit/47453de8bd4bb35aa7c5e6ec09f9ab3e22445a9b))
+* **deps:** update node.js to 16.16 ([a8cc2f4](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a8cc2f44835cada9584de097a8bd4fdec5ee1774))
+* **deps:** update plugin dokka to v1.7.0 ([177eb25](https://github.com/kelvindev15/Kotlin2PlantUML/commit/177eb25124fd78c903c3b3cceee8f4a8dbf29a2e))
+* **deps:** update plugin kotlin-qa to v0.18.0 ([44283f8](https://github.com/kelvindev15/Kotlin2PlantUML/commit/44283f8ebdc068badcee18367d2c82619eac1aed))
+* **deps:** update plugin kotlin-qa to v0.19.0 ([b3ea91a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/b3ea91a28d8dad875aa03a951781bfa550640ed8))
+* **deps:** update plugin kotlin-qa to v0.19.1 ([392f5d0](https://github.com/kelvindev15/Kotlin2PlantUML/commit/392f5d0a16beb844e91ba225bc494ea497dc7acc))
+* **deps:** update plugin kotlin-qa to v0.20.3 ([d2d2faf](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d2d2faf05d415dab6988b671bc027c01b5d7b892))
+* **deps:** update plugin kotlin-qa to v0.20.4 ([0217158](https://github.com/kelvindev15/Kotlin2PlantUML/commit/0217158d7bcc3fe2e4e101b2febc2c3d5dcecf9a))
+* **deps:** update plugin kotlin-qa to v0.21.0 ([4e83a96](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4e83a96a701369d2c8066ad6693b98d1f4eee6d5))
+* **deps:** update plugin kotlin-qa to v0.22.0 ([91070d5](https://github.com/kelvindev15/Kotlin2PlantUML/commit/91070d5d5c5c68b1605156acfe7d8296c068b5f4))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.11 ([5778e46](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5778e4639397a154a9d73dd45766e86e505497ac))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.12 ([c5a64ca](https://github.com/kelvindev15/Kotlin2PlantUML/commit/c5a64ca159c7efc4a0cf28a69b57649c57bb9559))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.14 ([88b9d03](https://github.com/kelvindev15/Kotlin2PlantUML/commit/88b9d0309333e2d22a4bae87468065d842b4b436))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.15 ([b54e33c](https://github.com/kelvindev15/Kotlin2PlantUML/commit/b54e33c9cfc2348a7dcbe3ab67669573f97aa225))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.16 ([457a382](https://github.com/kelvindev15/Kotlin2PlantUML/commit/457a38241c4426fbb80139b23312fbfa0db77125))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.17 ([296b4e6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/296b4e6d6eb1ddeca567ee54c73dee3800a7091d))
+* **deps:** update plugin publiconcentral to v0.8.0 ([fd11a2e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/fd11a2e8715d6ce9333e72bfdb34aef33c8113aa))
+* **deps:** update plugin publiconcentral to v0.8.2 ([a8991d0](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a8991d046099413c8e27dd836f3590cd5cbf6042))
+* **deps:** update plugin publiconcentral to v0.8.3 ([e49f02f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/e49f02ff29b4d76506ca831333ff0ac927afc1ac))
+
 ### [2.0.1](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.0...2.0.1) (2022-05-03)
 
 
