@@ -1,3 +1,16 @@
+## [2.0.3](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.2...2.0.3) (2022-07-28)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.4.1 ([043679f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/043679f1c88f1dea5e607c4ccb934cc4276758c9))
+
+
+### Dependency updates
+
+* **deps:** update plugin kotlin-qa to v0.22.1 ([f3b4eae](https://github.com/kelvindev15/Kotlin2PlantUML/commit/f3b4eae0ea4a6d83be2a4939073b127ee91d32b1))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.18 ([b8da64e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/b8da64ee272177eae3caa9d8df70567e638acfed))
+
 ## [2.0.2](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.1...2.0.2) (2022-07-27)
 
 
