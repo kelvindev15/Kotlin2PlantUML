@@ -3,6 +3,9 @@
 This library allows you to obtain a plantuml class diagram directly from your Kotlin (and Java)
 code base. You can either generate a simple class uml representation or the hierarchy of a root class.
 
+[![javadoc](https://javadoc.io/badge2/io.github.kelvindev15/Kotlin2PlantUML/javadoc.svg)](https://javadoc.io/doc/io.github.kelvindev15/Kotlin2PlantUML)
+![CI](https://github.com/Kelvindev15/Kotlin2PlantUML/actions/workflows/built_and_test.yml/badge.svg)
+
 ## Usage
 
 ### Command line
@@ -75,4 +78,8 @@ val myPlantUML = ClassDiagram(
     configuration = Configuration(recurse = true)
 ).plantUml()
 ```
+
+### Reference
+
+*  [Javadoc](https://javadoc.io/doc/io.github.kelvindev15/Kotlin2PlantUML/latest/index.html)
 

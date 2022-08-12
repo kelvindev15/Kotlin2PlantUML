@@ -24,25 +24,34 @@ jobs:
     steps:
       - name: Checkout
         uses: danysk/action-checkout@0.2.1
-      - uses: DanySK/build-check-deploy-gradle-action@1.2.15
+      - uses: DanySK/build-check-deploy-gradle-action@2.1.4
         with:
           build_command: 'true'
           should-run-codecov: ${{ contains('Linux', runner.os) }}
   test-deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 120
-    if: contains(github.repository, 'Kotlin2PlantUML') && contains('push workflow_dispatch', github.event_name)
     concurrency:
       group: ${{ github.workflow }}-test-deploy-${{ github.event.number || github.ref }}
       cancel-in-progress: true
     steps:
       - name: Checkout
         uses: danysk/action-checkout@0.2.1
-      - uses: DanySK/build-check-deploy-gradle-action@1.2.15
+      - uses: DanySK/build-check-deploy-gradle-action@2.1.4
+        with:
+          build-command: true
+          check-command: |
+            ./gradlew tasks | grep releaseStagingRepositoryOnMavenCentral
+            ./gradlew tasks | grep closeStagingRepositoryOnMavenCentral
+          should-run-codecov: false
+          should-deploy: false
+          should-validate-wrapper: false
+      - uses: DanySK/build-check-deploy-gradle-action@2.1.4
+        if: contains(github.repository, 'Kotlin2PlantUML') && contains('push workflow_dispatch', github.event_name)
         with:
           build-command: true
           check-command: true
-          deploy-command: ./gradlew closeKotlinMavenOnMavenCentralNexus --parallel
+          deploy-command: ./gradlew uploadKotlin close || ./gradlew uploadKotlin close || ./gradlew uploadKotlin close
           java-version: 11
           should-run-codecov: false
           should-deploy: true
@@ -67,7 +76,7 @@ jobs:
         uses: actions/checkout@v3.0.2
         with:
           submodules: recursive
-      - uses: DanySK/build-check-deploy-gradle-action@1.2.15
+      - uses: DanySK/build-check-deploy-gradle-action@2.1.4
         with:
           java-version: 11
           build-command: true
