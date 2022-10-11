@@ -1,3 +1,15 @@
+## [2.0.8](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.7...2.0.8) (2022-10-11)
+
+
+### Bug Fixes
+
+* ci badly :( ([53e7642](https://github.com/kelvindev15/Kotlin2PlantUML/commit/53e7642e8a51d123a0f497837e1290be00803222))
+
+
+### General maintenance
+
+* resolve conflict ([b9eb7c7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/b9eb7c72c18fff18fc9dc5c8a36e11f2a28a018a))
+
 ## [2.0.7](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.6...2.0.7) (2022-10-11)
 
 
