@@ -1,3 +1,29 @@
+## [2.0.6](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.5...2.0.6) (2022-10-11)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.5.1 ([72654b1](https://github.com/kelvindev15/Kotlin2PlantUML/commit/72654b1cfcf50246dc2aca7c32ce82f1e7010cd2))
+
+
+### Dependency updates
+
+* **deps:** update actions/checkout action to v3.1.0 ([c7edfe6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/c7edfe69d7018a2cabdbe4328d7373be91c9cf62))
+* **deps:** update danysk/action-checkout action to v0.2.3 ([cac4d29](https://github.com/kelvindev15/Kotlin2PlantUML/commit/cac4d2949fd37009d6cc65708cf0d8069b6fd83d))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.10 ([6d606c4](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6d606c47d0904d00d414cf13365c75d915ae2669))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.8 ([5ef88ba](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5ef88bab5800e3865e06537595a18df9541a9baa))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.9 ([a31ce90](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a31ce90161cc7536f7addf362b1eda4c7ee3f0d3))
+* **deps:** update kotlin to v1.7.20 ([6105ff9](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6105ff92a67808c6568f07d2a0ec998a8e01c7ab))
+* **deps:** update plugin dokka to v1.7.20 ([4f6fc3e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4f6fc3eb4f0a011fe2f2a42d5ba47cc51ad2fc52))
+* **deps:** update plugin kotlin-qa to v0.25.1 ([9fcea62](https://github.com/kelvindev15/Kotlin2PlantUML/commit/9fcea62fda525cba47d67e70c498a22056acd5a2))
+* **deps:** update plugin kotlin-qa to v0.26.0 ([39aad90](https://github.com/kelvindev15/Kotlin2PlantUML/commit/39aad9037804c34ef0534242d8beb9de2f76e29d))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.21 ([d6a25ba](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d6a25ba64a2f4cceb69d94e195977c055a69ae9c))
+
+
+### Build and continuous integration
+
+* fix release commands ([#115](https://github.com/kelvindev15/Kotlin2PlantUML/issues/115)) ([02fb82d](https://github.com/kelvindev15/Kotlin2PlantUML/commit/02fb82d70071258b4c3fb5738b36155343f9ebc3))
+
 ## [2.0.5](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.4...2.0.5) (2022-09-27)
 
 
