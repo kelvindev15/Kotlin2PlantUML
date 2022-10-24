@@ -1,7 +1,7 @@
 [versions]
 alchemist = "17.0.2"
 kotlin = "1.7.20"
-kotest = "5.5.1"
+kotest = "5.5.2"
 jUnit = "5.9.1"
 
 [libraries]
@@ -18,8 +18,8 @@ junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", vers
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.26.0" }
-publicOnCentral = { id = "org.danilopianini.publish-on-central", version = "2.0.6" }
+kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.26.1" }
+publicOnCentral = { id = "org.danilopianini.publish-on-central", version = "2.0.8" }
 dokka = { id = "org.jetbrains.dokka", version = "1.7.20" }
 shadowJar = { id = "com.github.johnrengelman.shadow", version = "7.1.2" }
 semanticVersioning = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "0.3.0" }

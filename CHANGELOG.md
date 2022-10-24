@@ -1,3 +1,34 @@
+## [2.0.10](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.9...2.0.10) (2022-10-24)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.5.2 ([9418094](https://github.com/kelvindev15/Kotlin2PlantUML/commit/94180948bb4d2fcdd74ff447c31c5d05231ef9b3))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.11 ([630e72c](https://github.com/kelvindev15/Kotlin2PlantUML/commit/630e72ca8def5d2ebeb90464cfc98283f95b9d64))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.12 ([f63ea94](https://github.com/kelvindev15/Kotlin2PlantUML/commit/f63ea94bf8d8e3fea9277ac88ff9a55956f0e406))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.12 ([4151858](https://github.com/kelvindev15/Kotlin2PlantUML/commit/41518584a7259dd0d1f7e8947b3aecd5cae614af))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.13 ([99540fe](https://github.com/kelvindev15/Kotlin2PlantUML/commit/99540fee7c19ad6595c976877a773ccf267b4b81))
+* **deps:** update node.js to 16.18 ([fa4f96c](https://github.com/kelvindev15/Kotlin2PlantUML/commit/fa4f96ce11d0cdf196cb7f634150569ad7b69c1f))
+* **deps:** update plugin kotlin-qa to v0.26.1 ([0e0c5b2](https://github.com/kelvindev15/Kotlin2PlantUML/commit/0e0c5b2b3492cf76b74ad7f66d7997e860bedc87))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.22 ([55c3201](https://github.com/kelvindev15/Kotlin2PlantUML/commit/55c3201e2c60498985323ea882222fcb8c261981))
+* **deps:** update plugin publiconcentral to v2.0.8 ([b8d5726](https://github.com/kelvindev15/Kotlin2PlantUML/commit/b8d5726b278120f984bbbe7b5440f0c49f67e5b1))
+
+## [2.0.9](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.8...2.0.9) (2022-10-11)
+
+
+### Bug Fixes
+
+* ci badly :( ([7bedfa9](https://github.com/kelvindev15/Kotlin2PlantUML/commit/7bedfa906e651fcf8aeb9a5504eb692ef8149c6b))
+
+
+### General maintenance
+
+* Merge branch 'master' of github.com:kelvindev15/Kotlin2PlantUML ([9eaeb6d](https://github.com/kelvindev15/Kotlin2PlantUML/commit/9eaeb6dc31ef6cfe951c301463015ebc828d9416))
+
 ## [2.0.8](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.7...2.0.8) (2022-10-11)
 
 
