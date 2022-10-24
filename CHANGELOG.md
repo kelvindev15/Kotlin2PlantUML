@@ -1,3 +1,10 @@
+## [2.0.11](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.10...2.0.11) (2022-10-24)
+
+
+### Bug Fixes
+
+* **ci:** try using access token as environment variable ([#126](https://github.com/kelvindev15/Kotlin2PlantUML/issues/126)) ([5328e3d](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5328e3df1ae7f048adcbc0eb726e79843e1e65ec))
+
 ## [2.0.10](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.9...2.0.10) (2022-10-24)
 
 
