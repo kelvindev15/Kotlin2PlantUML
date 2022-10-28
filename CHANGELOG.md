@@ -1,3 +1,18 @@
+## [2.0.12](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.11...2.0.12) (2022-10-28)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.5.3 ([9518f19](https://github.com/kelvindev15/Kotlin2PlantUML/commit/9518f1937cb9f7302a2420c274dda1f7eb2e94e1))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.13 ([ff2ad90](https://github.com/kelvindev15/Kotlin2PlantUML/commit/ff2ad9010106b9b0d15684420ea915669d952549))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.14 ([85500c3](https://github.com/kelvindev15/Kotlin2PlantUML/commit/85500c3e025447760e19e324a7126c9a776f2c3e))
+* **deps:** update node.js to 18.12 ([ebb2755](https://github.com/kelvindev15/Kotlin2PlantUML/commit/ebb2755c91983dc764e97386ac518b4b65ab8b78))
+* **deps:** update node.js to v18 ([cf9030a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/cf9030a01c3ce3c100a61ac9ed50c4dd2bbf358c))
+
 ## [2.0.11](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.10...2.0.11) (2022-10-24)
 
 
