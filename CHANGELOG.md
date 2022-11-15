@@ -1,3 +1,18 @@
+## [2.0.14](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.13...2.0.14) (2022-11-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.150 ([d95fd88](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d95fd88a40e20fa31e672ef50afaa1d21710572a))
+
+
+### Dependency updates
+
+* **deps:** update kotlin monorepo to v1.7.21 ([20ee080](https://github.com/kelvindev15/Kotlin2PlantUML/commit/20ee0800146720f6938f8779316643fd1c773dba))
+* **deps:** update plugin kotlin-qa to v0.27.1 ([c8e03db](https://github.com/kelvindev15/Kotlin2PlantUML/commit/c8e03db3426ef62714df291edd365f0cd292694f))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.23 ([fa35ca6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/fa35ca65f60645630dd3a99aa9c3463befc8bdea))
+* **deps:** update plugin publiconcentral to v2.0.9 ([9912667](https://github.com/kelvindev15/Kotlin2PlantUML/commit/99126676f3df3730b580bd91feb8ab7db0aa2c8f))
+
 ## [2.0.13](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.12...2.0.13) (2022-11-07)
 
 
