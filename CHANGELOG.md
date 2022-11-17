@@ -1,3 +1,10 @@
+## [2.0.15](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.14...2.0.15) (2022-11-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.151 ([8fce51b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/8fce51baf5a7293325c97e2e3ba1fb41474640b8))
+
 ## [2.0.14](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.13...2.0.14) (2022-11-15)
 
 
