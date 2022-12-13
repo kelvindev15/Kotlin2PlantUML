@@ -1,3 +1,25 @@
+## [2.0.16](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.15...2.0.16) (2022-12-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.152 ([dd135ae](https://github.com/kelvindev15/Kotlin2PlantUML/commit/dd135ae5a10ecd7c1b0f45c0e56d277b4c2e0117))
+
+
+### Dependency updates
+
+* **deps:** update actions/checkout action to v3.2.0 ([ad43e0a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/ad43e0ad1b5f09ad899d9c3d02ab9977a9cb074f))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.15 ([cce6a20](https://github.com/kelvindev15/Kotlin2PlantUML/commit/cce6a2010ee69a414db05981d2b15453d0675c31))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.16 ([6e8571c](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6e8571c6bca2d28c20501d4319e56d6d091a158f))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.17 ([3b67c8e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/3b67c8e1277e551aadf9364638e2579723bcba2f))
+* **deps:** update dependency gradle to v7.6 ([7d0fb1d](https://github.com/kelvindev15/Kotlin2PlantUML/commit/7d0fb1dfed8c7cd44c758d169059656ed05f62d7))
+* **deps:** update kotlin monorepo to v1.7.22 ([4423b56](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4423b56fb60d333ff82527f3d9b1a8a9e9faaea0))
+* **deps:** update plugin kotlin-qa to v0.28.0 ([d3998c3](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d3998c38112c3649cd5d31f9dcaa341a89306662))
+* **deps:** update plugin kotlin-qa to v0.29.1 ([370806a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/370806af20f240aec30eef2329a0dad8b29a3f82))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.25 ([ca583da](https://github.com/kelvindev15/Kotlin2PlantUML/commit/ca583daa9b6e8942c606ff967df9e0d057d8d6fc))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.0 ([d04d7fb](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d04d7fbb50ad7af1383ca31ce844655fc793ebbc))
+* **deps:** update plugin publiconcentral to v2.0.11 ([db1a56a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/db1a56ac0ffe62ad7713c035cccbb5366559dc25))
+
 ## [2.0.15](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.14...2.0.15) (2022-11-17)
 
 
