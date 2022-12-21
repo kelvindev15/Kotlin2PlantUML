@@ -1,3 +1,16 @@
+## [2.0.17](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.16...2.0.17) (2022-12-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.153 ([f2a8c6c](https://github.com/kelvindev15/Kotlin2PlantUML/commit/f2a8c6c316a42de33ee2a8dc8b5073839df74031))
+
+
+### Dependency updates
+
+* **deps:** update danysk/action-checkout action to v0.2.4 ([de4779f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/de4779fc4673f598bc47e2e913822b538bdaa847))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.18 ([a92aa25](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a92aa256e16020c6b55f68fb762b2baef2be839d))
+
 ## [2.0.16](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.15...2.0.16) (2022-12-13)
 
 
