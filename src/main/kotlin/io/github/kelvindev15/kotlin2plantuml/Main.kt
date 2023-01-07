@@ -96,7 +96,7 @@ fun main(args: Array<String>) {
         writeText(
             ClassDiagram(
                 clazz,
-                scanPackages = commandLine.getOptionValue(packages)?.split(":") ?: emptyList(),
+                scanPackages = commandLine.getOptionValue(packages)?.split(":").orEmpty(),
                 configuration = configuration,
             ).plantUml()
         )
