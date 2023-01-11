@@ -1,3 +1,28 @@
+## [2.0.19](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.18...2.0.19) (2023-01-11)
+
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.9.2 ([7a33761](https://github.com/kelvindev15/Kotlin2PlantUML/commit/7a33761c40bfc9337a7b0c59c640ea9bcd633d80))
+
+
+### Style improvements
+
+* replace elvis operator with orEmpty call ([aa8deb1](https://github.com/kelvindev15/Kotlin2PlantUML/commit/aa8deb1e01db1f7b74f00c51ae24f9effc913ec4))
+
+
+### Dependency updates
+
+* **deps:** update actions/checkout action to v3.3.0 ([b14feae](https://github.com/kelvindev15/Kotlin2PlantUML/commit/b14feae6c234c0a0736c0baba03564e850eeae07))
+* **deps:** update danysk/action-checkout action to v0.2.5 ([dffa726](https://github.com/kelvindev15/Kotlin2PlantUML/commit/dffa726de847e34bc24528fd52a2008165ef0ecb))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.16 ([613fb2a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/613fb2abb687fd4b6d985c281651daf831d04e9d))
+* **deps:** update node.js to 18.13 ([a1f4052](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a1f40524e0e70f091709bcbc2a508df51e29ccbb))
+* **deps:** update plugin kotlin-qa to v0.31.0 ([db3924b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/db3924b5a25527b71eedb33be57a66e06abe39e5))
+* **deps:** update plugin publiconcentral to v2.0.13 ([927b1ad](https://github.com/kelvindev15/Kotlin2PlantUML/commit/927b1adcd2e65ab43a84b951330df206455049ff))
+* **deps:** update plugin publiconcentral to v3 ([695b64b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/695b64bffad9f82a24d7606b54037240d38c9079))
+* **deps:** update plugin publiconcentral to v3.1.0 ([1387bf6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/1387bf617ba3a630f74ff7ce66c03bc2e082b64c))
+* **deps:** update plugin semanticversioning to v1 ([508b979](https://github.com/kelvindev15/Kotlin2PlantUML/commit/508b97972f75e4bda131dcfd9b8b1c7bbbabb529))
+
 ## [2.0.18](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.17...2.0.18) (2023-01-03)
 
 
