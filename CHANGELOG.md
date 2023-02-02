@@ -1,3 +1,20 @@
+## [2.0.20](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.19...2.0.20) (2023-02-02)
+
+
+### Bug Fixes
+
+* **deps:** update kotlin monorepo to v1.8.10 ([269dd7f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/269dd7f64a65a409e3f7a6e2bd48d2a33de20fb3))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.21 ([0a3ff6d](https://github.com/kelvindev15/Kotlin2PlantUML/commit/0a3ff6d2c3339ec2fabb9e55329aca4fad57c616))
+* **deps:** update node.js to 18.14 ([bc5529b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/bc5529b98f3cee25baa8af42ea22dc022960d711))
+* **deps:** update plugin kotlin-qa to v0.32.0 ([4cfbb3a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4cfbb3a9aafaff98717c7907d2938dfafc12d96c))
+* **deps:** update plugin kotlin-qa to v0.33.0 ([9e55a12](https://github.com/kelvindev15/Kotlin2PlantUML/commit/9e55a120c0406678a3aca67509f2adbade655a38))
+* **deps:** update plugin publiconcentral to v3.1.1 ([98bd160](https://github.com/kelvindev15/Kotlin2PlantUML/commit/98bd1607fe3429994b4827c39b7dcbb27eb2a8e1))
+* **deps:** update plugin publiconcentral to v3.2.0 ([6d64c40](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6d64c40500e8b04ad84862d15aaa411f8540d1dd))
+
 ## [2.0.19](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.18...2.0.19) (2023-01-11)
 
 
