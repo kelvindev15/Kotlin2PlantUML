@@ -1,3 +1,16 @@
+## [2.0.21](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.20...2.0.21) (2023-02-06)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.5.5 ([52f4ec6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/52f4ec6badf75cbe1f9783bb19eda01c835eb280))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.22 ([260702f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/260702f9cdba5050694e120d0ca3c8a64ba43c54))
+* **deps:** update plugin publiconcentral to v3.2.1 ([114dd42](https://github.com/kelvindev15/Kotlin2PlantUML/commit/114dd4267eb5a3392ab7c9dae0b918c9ea529a3d))
+
 ## [2.0.20](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.19...2.0.20) (2023-02-02)
 
 
