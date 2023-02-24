@@ -1,3 +1,30 @@
+## [2.0.22](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.21...2.0.22) (2023-02-24)
+
+
+### Bug Fixes
+
+* **deps:** change jgraph and classgraph deps from implementation to api ([21e1416](https://github.com/kelvindev15/Kotlin2PlantUML/commit/21e1416d821353a96f4469c15f12484d559c9a4b))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.23 ([5b284a3](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5b284a3e3f32d4582b6e8047588464548b8c7d53))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.24 ([e0292a5](https://github.com/kelvindev15/Kotlin2PlantUML/commit/e0292a54613422761fcbfd2aadedbb3981a88e11))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.25 ([007fbba](https://github.com/kelvindev15/Kotlin2PlantUML/commit/007fbba6923b41180c56ce6219cd7c0d70e0fef9))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.26 ([d9158b3](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d9158b32c944108364face383cee8ff613d44791))
+* **deps:** update dependency gradle to v7.6.1 ([313edc7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/313edc7cb356bacdba211a33df0fc2439bc19a66))
+* **deps:** update plugin kotlin-qa to v0.34.0 ([9397acb](https://github.com/kelvindev15/Kotlin2PlantUML/commit/9397acbf43bfe7bd017f5f182f8febf0ac60dd14))
+* **deps:** update plugin kotlin-qa to v0.34.1 ([75e43d5](https://github.com/kelvindev15/Kotlin2PlantUML/commit/75e43d559ddb2ed0c94c8faafc10651cc8a30d11))
+* **deps:** update plugin kotlin-qa to v0.34.2 ([5770796](https://github.com/kelvindev15/Kotlin2PlantUML/commit/57707962c6352e44411ba54817993e8c20608332))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.2 ([ace9228](https://github.com/kelvindev15/Kotlin2PlantUML/commit/ace9228b8f171b9f46f852b0b9de5a9e2f88f9ab))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.3 ([05cb346](https://github.com/kelvindev15/Kotlin2PlantUML/commit/05cb346c48733a32e7494c0fee38a765654535f7))
+* **deps:** update plugin publiconcentral to v3.2.2 ([91d7db8](https://github.com/kelvindev15/Kotlin2PlantUML/commit/91d7db8bf013076faa3bf85769dd70e6d1aa8704))
+* **deps:** update plugin publiconcentral to v3.2.3 ([80e9490](https://github.com/kelvindev15/Kotlin2PlantUML/commit/80e94902df27f9bd1d5071666a0ceaea86faaacc))
+* **deps:** update plugin publiconcentral to v3.2.4 ([7a755b6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/7a755b6d714c4abdae5c7b263545fd20e154ec98))
+* **deps:** update plugin publiconcentral to v3.3.0 ([2d4ac0e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/2d4ac0ebf2477dccb7ccbb8b424f32fa0eb88307))
+* **deps:** update plugin semanticversioning to v1.0.2 ([ba99b27](https://github.com/kelvindev15/Kotlin2PlantUML/commit/ba99b275fb6c5f53a4f521627ff26f35e7e892d3))
+* **deps:** update plugin semanticversioning to v1.1.1 ([884dc96](https://github.com/kelvindev15/Kotlin2PlantUML/commit/884dc96531bfa4755e4f8ea0d2854a09d1c695b1))
+
 ## [2.0.21](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.20...2.0.21) (2023-02-06)
 
 
