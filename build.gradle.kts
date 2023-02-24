@@ -29,8 +29,8 @@ repositories {
 
 dependencies {
     implementation(libs.bundles.kotlin)
-    implementation(libs.jGraph)
-    implementation(libs.classgraph)
+    api(libs.jGraph)
+    api(libs.classgraph)
     implementation(libs.common.cli)
     /* Test */
     testImplementation(libs.bundles.kotest)
