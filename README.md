@@ -36,6 +36,7 @@ java -jar kotlin2plantuml.jar --help
 Here's the output of the ***help*** command:
 ```text
 usage: java -jar kotlin2plantuml.jar full.class.name [...options]
+ -cp,--classpath <arg>           ':' separated paths (for classpath)
  -fv,--field-visibility <arg>    Max. field visibility (0=Public,
                                  1=Protected, 2=Internal, 3=Private)
  -h,--help                       Display this message

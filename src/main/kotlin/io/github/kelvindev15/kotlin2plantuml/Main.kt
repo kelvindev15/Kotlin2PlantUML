@@ -29,6 +29,7 @@ fun toVisibility(option: String?) = option?.let { KVisibility.values()[it.toInt(
  * -o, --output: output file
  * -r, --recurse: explore class hierarchy recursively
  * -p, --packages: `:` separated packages
+ * -cp, --classpath: `:` separated paths
  *
  * -hf, --hide-fields: hide fields
  * -hm, --hide-methods: hide methods
