@@ -2,6 +2,7 @@ package io.github.kelvindev15.kotlin2plantuml
 
 import io.github.kelvindev15.kotlin2plantuml.plantuml.ClassDiagram
 import io.github.kelvindev15.kotlin2plantuml.plantuml.Configuration
+import io.github.kelvindev15.kotlin2plantuml.utils.DefaultScanConfiguration
 import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils
 import org.apache.commons.cli.DefaultParser
 import org.apache.commons.cli.HelpFormatter
@@ -90,13 +91,13 @@ fun main(args: Array<String>) {
     val outputFile = commandLine.getOptionValue(output)
         ?: "build${File.separatorChar}reports${File.separatorChar}diagram.plantuml"
     val clazz = ReflectUtils.loadClassOrThrow(args[0])
+    commandLine.getOptionValue(packages)?.split(":")?.forEach { DefaultScanConfiguration.addPackage(it) }
     File(outputFile).apply {
         parentFile?.mkdirs()
         createNewFile()
         writeText(
             ClassDiagram(
                 clazz,
-                scanPackages = commandLine.getOptionValue(packages)?.split(":").orEmpty(),
                 configuration = configuration,
             ).plantUml()
         )
