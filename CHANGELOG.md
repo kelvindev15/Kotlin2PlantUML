@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.0...3.0.1) (2023-02-25)
+
+
+### Bug Fixes
+
+* **utils:** remove check of path existance on DefaultScanConfiguration ([fa5c851](https://github.com/kelvindev15/Kotlin2PlantUML/commit/fa5c8516e6d8127ab414ac2e7cc604e8fdedf0d8))
+
 ## [3.0.0](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.22...3.0.0) (2023-02-25)
 
 
