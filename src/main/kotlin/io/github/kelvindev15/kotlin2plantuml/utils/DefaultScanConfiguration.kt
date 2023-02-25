@@ -3,7 +3,6 @@ package io.github.kelvindev15.kotlin2plantuml.utils
 import java.net.URL
 import java.net.URLClassLoader
 import kotlin.io.path.Path
-import kotlin.io.path.exists
 
 /**
  * A default implementation of [ScanConfiguration].
@@ -34,11 +33,7 @@ class DefaultScanConfiguration private constructor() {
             this.classpath.remove(classpath.toURL())
         }
 
-        private fun String.toURL() = Path(this).also {
-            check(it.exists()) {
-                "$this path does not exist"
-            }
-        }.toUri().toURL()
+        private fun String.toURL() = Path(this).toUri().toURL()
 
         override val classLoader: ClassLoader
             get() = URLClassLoader(classpath.toTypedArray())
