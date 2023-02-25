@@ -16,6 +16,7 @@ import kotlin.reflect.jvm.jvmErasure
  */
 class ReflectUtils private constructor() {
     companion object {
+
         private fun loadClassOrNull(fullyQualifiedClass: String): KClass<*>? {
             var result: KClass<*>? = null
             try {
