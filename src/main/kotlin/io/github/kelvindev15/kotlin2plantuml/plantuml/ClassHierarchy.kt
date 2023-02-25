@@ -25,7 +25,7 @@ class ClassHierarchy(
         ClassGraph().acceptPackages(
             rootClass.java.packageName,
             *DefaultScanConfiguration.scanPackages.toTypedArray()
-        ).scan().let {
+        ).addClassLoader(DefaultScanConfiguration.classLoader).scan().let {
             if (rootClass.isInterface) {
                 it.getClassesImplementing(rootClass.java)
             } else {

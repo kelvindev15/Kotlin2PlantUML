@@ -33,7 +33,7 @@ class DefaultScanConfiguration private constructor() {
 
         private fun String.toURL() = Path(this).also {
             check(it.exists()) {
-                "$classpath path does not exist"
+                "$this path does not exist"
             }
         }.toUri().toURL()
 

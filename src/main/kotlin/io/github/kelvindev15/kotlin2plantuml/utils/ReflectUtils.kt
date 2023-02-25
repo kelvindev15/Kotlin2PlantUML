@@ -1,5 +1,6 @@
 package io.github.kelvindev15.kotlin2plantuml.utils
 
+import java.net.URLClassLoader
 import kotlin.reflect.KCallable
 import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
@@ -20,7 +21,11 @@ class ReflectUtils private constructor() {
         private fun loadClassOrNull(fullyQualifiedClass: String): KClass<*>? {
             var result: KClass<*>? = null
             try {
-                result = ClassLoader.getSystemClassLoader().loadClass(fullyQualifiedClass).kotlin
+                var classLoader = DefaultScanConfiguration.classLoader
+                if (classLoader is URLClassLoader) {
+                    classLoader = URLClassLoader(classLoader.urLs, ClassLoader.getSystemClassLoader())
+                }
+                result = classLoader.loadClass(fullyQualifiedClass).kotlin
             } catch (_: ClassNotFoundException) { }
             return result
         }
