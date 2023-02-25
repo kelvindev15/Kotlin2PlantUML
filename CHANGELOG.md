@@ -1,3 +1,40 @@
+## [3.0.0](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.22...3.0.0) (2023-02-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* add the possibility to specify a classpath
+
+### Features
+
+* add the possibility to specify a classpath ([7ba5a5b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/7ba5a5be104977c3eca4058b22d369b8d012b09b))
+
+
+### Style improvements
+
+* add a blank line ([9aed74e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/9aed74ed610a96f0d479efcb9081931314a88fb3))
+
+
+### General maintenance
+
+* **utils:** add a default scan configuration ([281e4e6](https://github.com/kelvindev15/Kotlin2PlantUML/commit/281e4e6a1ba6090f5f5572363299c4bd5f6fefcf))
+
+
+### Refactoring
+
+* use the DefaultScanConfiguration to store scan packages ([11d1a7c](https://github.com/kelvindev15/Kotlin2PlantUML/commit/11d1a7ce67d82a92885825fda0fe9cb1a31dd4f1))
+
+
+### Documentation
+
+* **readme:** update README ([a77297f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a77297f0b5689b5c47a87e640b6a4a0f40141f7f))
+* **utils:** add ScanConfiguration kdoc ([b49090c](https://github.com/kelvindev15/Kotlin2PlantUML/commit/b49090c50a9778c858134daee198426d650882d0))
+
+
+### Dependency updates
+
+* **deps:** update plugin kotlin-qa to v0.35.0 ([e91e891](https://github.com/kelvindev15/Kotlin2PlantUML/commit/e91e891d149193bcd3a114f3e8452aab9a950082))
+
 ## [2.0.22](https://github.com/kelvindev15/Kotlin2PlantUML/compare/2.0.21...2.0.22) (2023-02-24)
 
 
