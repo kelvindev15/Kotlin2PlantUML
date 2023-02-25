@@ -5,6 +5,9 @@ import java.net.URLClassLoader
 import kotlin.io.path.Path
 import kotlin.io.path.exists
 
+/**
+ * A default implementation of [ScanConfiguration].
+ */
 class DefaultScanConfiguration private constructor() {
 
     companion object : ScanConfiguration {
