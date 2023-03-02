@@ -10,7 +10,7 @@ kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref =
 kotest-runner = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
-classgraph = { module = "io.github.classgraph:classgraph", version = "4.8.154" }
+classgraph = { module = "io.github.classgraph:classgraph", version = "4.8.155" }
 jGraph = { module = "org.jgrapht:jgrapht-core", version = "1.5.1" }
 common-cli = { module = "commons-cli:commons-cli", version = "1.5.0" }
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jUnit" }
@@ -18,7 +18,7 @@ junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", vers
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.34.1" }
+kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.35.0" }
 publicOnCentral = { id = "org.danilopianini.publish-on-central", version = "3.3.0" }
 dokka = { id = "org.jetbrains.dokka", version = "1.7.20" }
 shadowJar = { id = "com.github.johnrengelman.shadow", version = "7.1.2" }

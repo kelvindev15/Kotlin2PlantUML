@@ -2,6 +2,7 @@ package io.github.kelvindev15.kotlin2plantuml
 
 import io.github.kelvindev15.kotlin2plantuml.plantuml.ClassDiagram
 import io.github.kelvindev15.kotlin2plantuml.plantuml.Configuration
+import io.github.kelvindev15.kotlin2plantuml.utils.DefaultScanConfiguration
 import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils
 import org.apache.commons.cli.DefaultParser
 import org.apache.commons.cli.HelpFormatter
@@ -28,6 +29,7 @@ fun toVisibility(option: String?) = option?.let { KVisibility.values()[it.toInt(
  * -o, --output: output file
  * -r, --recurse: explore class hierarchy recursively
  * -p, --packages: `:` separated packages
+ * -cp, --classpath: `:` separated paths
  *
  * -hf, --hide-fields: hide fields
  * -hm, --hide-methods: hide methods
@@ -46,6 +48,7 @@ fun main(args: Array<String>) {
     val recurse = Option("r", "recurse", false, "Visit class class hierarchy")
     val output = Option("o", "output", true, "Output file path")
     val packages = Option("p", "packages", true, "':' separated packages (for subclasses)")
+    val classpath = Option("cp", "classpath", true, "':' separated paths (for classpath)")
     val hideFields = Option("hf", "hide-fields", false, "Hide fields on classes")
     val hideMethods = Option("hm", "hide-methods", false, "Hide methods on classes")
     val hideRelationships = Option("hr", "hide-relationships", false, "Hide relationships between classes")
@@ -66,6 +69,7 @@ fun main(args: Array<String>) {
         .addOption(recurse)
         .addOption(output)
         .addOption(packages)
+        .addOption(classpath)
         .addOption(hideFields)
         .addOption(hideMethods)
         .addOption(hideRelationships)
@@ -87,6 +91,8 @@ fun main(args: Array<String>) {
     require(args.isNotEmpty()) {
         "No fully qualified input class had been provided"
     }
+    commandLine.getOptionValue(packages)?.split(":")?.forEach { DefaultScanConfiguration.addPackage(it) }
+    commandLine.getOptionValue(classpath)?.split(":")?.forEach { DefaultScanConfiguration.addClasspath(it) }
     val outputFile = commandLine.getOptionValue(output)
         ?: "build${File.separatorChar}reports${File.separatorChar}diagram.plantuml"
     val clazz = ReflectUtils.loadClassOrThrow(args[0])
@@ -96,7 +102,6 @@ fun main(args: Array<String>) {
         writeText(
             ClassDiagram(
                 clazz,
-                scanPackages = commandLine.getOptionValue(packages)?.split(":").orEmpty(),
                 configuration = configuration,
             ).plantUml()
         )

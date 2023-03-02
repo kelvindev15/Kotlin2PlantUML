@@ -1,6 +1,7 @@
 package io.github.kelvindev15.kotlin2plantuml.plantuml
 
 import io.github.classgraph.ClassGraph
+import io.github.kelvindev15.kotlin2plantuml.utils.DefaultScanConfiguration
 import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils.Companion.isInterface
 import org.jgrapht.Graph
 import org.jgrapht.graph.DefaultDirectedGraph
@@ -15,14 +16,16 @@ class ClassHierarchy(
      * The root of hierarchy.
      */
     val rootClass: KClass<*>,
-    scanPackages: List<String> = listOf(),
     private val configuration: Configuration = Configuration(),
 ) : Graph<KClass<*>, PlantUmlRelationship> by DefaultDirectedGraph(PlantUmlRelationship::class.java) {
 
     init {
         addVertex(rootClass)
         // GRAPH VERTICES
-        ClassGraph().acceptPackages(rootClass.java.packageName, *scanPackages.toTypedArray()).scan().let {
+        ClassGraph().acceptPackages(
+            rootClass.java.packageName,
+            *DefaultScanConfiguration.scanPackages.toTypedArray()
+        ).addClassLoader(DefaultScanConfiguration.classLoader).scan().let {
             if (rootClass.isInterface) {
                 it.getClassesImplementing(rootClass.java)
             } else {
