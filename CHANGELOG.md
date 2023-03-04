@@ -1,3 +1,31 @@
+## [3.0.3](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.2...3.0.3) (2023-03-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.156 ([09611ca](https://github.com/kelvindev15/Kotlin2PlantUML/commit/09611caad610e48083eff212e9c979cd5d6c1979))
+
+
+### General maintenance
+
+* **build:** remove  VERSION_CATALOGS feature preview enablement call ([a5d86db](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a5d86db320ce4df002774661fdf05b03ae5a38e2))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.0 ([dfd2d59](https://github.com/kelvindev15/Kotlin2PlantUML/commit/dfd2d59566dd71f58c920a12a7cf848b3268ff01))
+* **deps:** update dependency gradle to v8 ([8bba9ec](https://github.com/kelvindev15/Kotlin2PlantUML/commit/8bba9ec229aba49046ffd8f453f8f94dccbbdf34))
+* **deps:** update dependency gradle to v8.0.2 ([d0298d9](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d0298d9e88ebf0c0df46bbff14248cc3ba7cfd91))
+* **deps:** update plugin dokka to v1.8.10 ([c09a0f2](https://github.com/kelvindev15/Kotlin2PlantUML/commit/c09a0f2d87df2715ce6947c891b9333ebeb46006))
+* **deps:** update plugin kotlin-qa to v0.36.1 ([a94875f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a94875f0f48a47242bbdd655dfd2bc3d484614ad))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.5 ([27e4647](https://github.com/kelvindev15/Kotlin2PlantUML/commit/27e4647a23a2d9b503fa3d9d7be3d46046209055))
+* **deps:** update plugin publiconcentral to v3.3.1 ([df6f589](https://github.com/kelvindev15/Kotlin2PlantUML/commit/df6f58909b21cbaff1bc332e54ecc782e254352e))
+* **deps:** update plugin publiconcentral to v3.3.2 ([751cc91](https://github.com/kelvindev15/Kotlin2PlantUML/commit/751cc91a29b9fc0a41e7b8180a54c0ec58ccfd34))
+* **deps:** update plugin publiconcentral to v3.3.3 ([d7bca1e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d7bca1ee9181c0e85eef602b5e9b822659f91008))
+* **deps:** update plugin semanticversioning to v1.1.2 ([df99978](https://github.com/kelvindev15/Kotlin2PlantUML/commit/df999783975413e65791efef33daef7cdab47cff))
+* **deps:** update plugin semanticversioning to v1.1.4 ([d64f93f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d64f93fcfe0937d7fcc5b0717a9227d6ba7006a7))
+* **deps:** update plugin shadowjar to v8 ([2a340ff](https://github.com/kelvindev15/Kotlin2PlantUML/commit/2a340ffe6509319678ab4d98c3235692612f98fd))
+
 ## [3.0.2](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.1...3.0.2) (2023-02-28)
 
 
