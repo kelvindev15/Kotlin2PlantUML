@@ -1,3 +1,16 @@
+## [3.0.4](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.3...3.0.4) (2023-03-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.157 ([62c158e](https://github.com/kelvindev15/Kotlin2PlantUML/commit/62c158eeee8c8791dbdb75e6c8bb8f2085cafd0e))
+
+
+### Dependency updates
+
+* **deps:** update node.js to 18.15 ([495f8a2](https://github.com/kelvindev15/Kotlin2PlantUML/commit/495f8a2b90cf8ba098c2af279677d1de9d87dfe2))
+* **deps:** update plugin publiconcentral to v3.4.0 ([412cfa9](https://github.com/kelvindev15/Kotlin2PlantUML/commit/412cfa9fdca21b7ece449ff3bc4997f3203be973))
+
 ## [3.0.3](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.2...3.0.3) (2023-03-04)
 
 
