@@ -24,7 +24,7 @@ class ClassHierarchy(
         // GRAPH VERTICES
         ClassGraph().acceptPackages(
             rootClass.java.packageName,
-            *DefaultScanConfiguration.scanPackages.toTypedArray()
+            *DefaultScanConfiguration.scanPackages.toTypedArray(),
         ).addClassLoader(DefaultScanConfiguration.classLoader).scan().let {
             if (rootClass.isInterface) {
                 it.getClassesImplementing(rootClass.java)

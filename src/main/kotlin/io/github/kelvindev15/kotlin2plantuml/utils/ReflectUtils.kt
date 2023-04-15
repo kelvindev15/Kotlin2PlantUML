@@ -36,7 +36,7 @@ class ReflectUtils private constructor() {
          */
         fun loadClassOrThrow(
             fullyQualifiedClass: String,
-            lazyMessage: () -> String = { "Unable to find $fullyQualifiedClass" }
+            lazyMessage: () -> String = { "Unable to find $fullyQualifiedClass" },
         ): KClass<*> = loadClassOrNull(fullyQualifiedClass) ?: throw ClassNotFoundException(lazyMessage())
 
         /**
@@ -46,7 +46,7 @@ class ReflectUtils private constructor() {
         fun loadClassOrThrow(
             packages: Iterable<String>,
             simpleClassName: String,
-            lazyMessage: () -> String = { "Unable to find $simpleClassName in the provided packages" }
+            lazyMessage: () -> String = { "Unable to find $simpleClassName in the provided packages" },
         ): KClass<*> = packages.mapNotNull { loadClassOrNull("$it.$simpleClassName") }
             .also { require(it.isNotEmpty(), lazyMessage) }
             .first()
@@ -95,7 +95,9 @@ class ReflectUtils private constructor() {
             val upperBounds = this@plantUml.upperBounds.minus(Any::class.createType(nullable = true))
             if (upperBounds.isNotEmpty()) {
                 append(upperBounds.joinToString(separator = ",\\n") { "${this@plantUml.name} : ${it.plantUml()}" })
-            } else append(this@plantUml.name)
+            } else {
+                append(this@plantUml.name)
+            }
         }
 
         /**
