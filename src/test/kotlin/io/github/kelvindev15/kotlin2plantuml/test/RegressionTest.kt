@@ -22,28 +22,28 @@ class RegressionTest : FunSpec() {
         test("no recurse") {
             comparePlantUml(
                 ClassDiagram(Vehicle::class, configuration = Configuration(recurse = false)).plantUml(),
-                "no_recurse.plantuml"
+                "no_recurse.plantuml",
             )
         }
 
         test("hide methods") {
             comparePlantUml(
                 ClassDiagram(Vehicle::class, configuration = Configuration(hideMethods = true)).plantUml(),
-                "hide_methods.plantuml"
+                "hide_methods.plantuml",
             )
         }
 
         test("hide relationships") {
             comparePlantUml(
                 ClassDiagram(Vehicle::class, configuration = Configuration(hideRelationships = true)).plantUml(),
-                "hide_relationships.plantuml"
+                "hide_relationships.plantuml",
             )
         }
 
         test("hide fields") {
             comparePlantUml(
                 ClassDiagram(Vehicle::class, configuration = Configuration(hideFields = true)).plantUml(),
-                "hide_fields.plantuml"
+                "hide_fields.plantuml",
             )
         }
 
@@ -51,9 +51,9 @@ class RegressionTest : FunSpec() {
             comparePlantUml(
                 ClassDiagram(
                     Vehicle::class,
-                    configuration = Configuration(maxMethodVisibility = KVisibility.PRIVATE)
+                    configuration = Configuration(maxMethodVisibility = KVisibility.PRIVATE),
                 ).plantUml(),
-                "private_methods.plantuml"
+                "private_methods.plantuml",
             )
         }
 
@@ -61,9 +61,9 @@ class RegressionTest : FunSpec() {
             comparePlantUml(
                 ClassDiagram(
                     Vehicle::class,
-                    configuration = Configuration(maxFieldVisibility = KVisibility.PRIVATE)
+                    configuration = Configuration(maxFieldVisibility = KVisibility.PRIVATE),
                 ).plantUml(),
-                "private_fields.plantuml"
+                "private_fields.plantuml",
             )
         }
     }

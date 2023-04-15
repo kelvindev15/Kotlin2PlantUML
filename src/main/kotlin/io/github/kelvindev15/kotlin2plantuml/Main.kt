@@ -56,13 +56,13 @@ fun main(args: Array<String>) {
         "fv",
         "field-visibility",
         true,
-        "Max. field visibility (0=Public, 1=Protected, 2=Internal, 3=Private)"
+        "Max. field visibility (0=Public, 1=Protected, 2=Internal, 3=Private)",
     )
     val methodVisibility = Option(
         "mv",
         "method-visibility",
         true,
-        "Max. method visibility (0=Public, 1=Protected, 2=Internal, 3=Private)"
+        "Max. method visibility (0=Public, 1=Protected, 2=Internal, 3=Private)",
     )
     val options = Options()
         .addOption(help)
@@ -103,7 +103,7 @@ fun main(args: Array<String>) {
             ClassDiagram(
                 clazz,
                 configuration = configuration,
-            ).plantUml()
+            ).plantUml(),
         )
     }
 }

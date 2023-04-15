@@ -17,10 +17,12 @@ enum class RelationshipType(
      * A [EXTENDS] B will be translated to "A --|> B".
      */
     EXTENDS("--|>", "<|--"),
+
     /**
      * A [IMPLEMENTS] B will be translated to "A ..|> B".
      */
-    IMPLEMENTS("..|>", "<|..");
+    IMPLEMENTS("..|>", "<|.."),
+    ;
 
     /**
      * String representation of this relationship.

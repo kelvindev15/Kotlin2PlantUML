@@ -37,8 +37,8 @@ class Car<T, O, A : ComplexGeneric<T, O, A>> :
     AbstractVehicle<T>(),
     OutOfThree,
     FourWheels<T, O, Vehicle<T>>
-        where T : FourWheels<T, O, A>,
-              O : Wheeled<T, O> {
+    where T : FourWheels<T, O, A>,
+          O : Wheeled<T, O> {
     override fun description(): String {
         TODO("Not yet implemented")
     }
