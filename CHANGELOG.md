@@ -1,3 +1,15 @@
+## [3.0.6](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.5...3.0.6) (2023-04-18)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.6.1 ([db0e690](https://github.com/kelvindev15/Kotlin2PlantUML/commit/db0e690dafd5a89d5d4b31bb241877cd174baebe))
+
+
+### Dependency updates
+
+* **deps:** update plugin publiconcentral to v5 ([7f7efbf](https://github.com/kelvindev15/Kotlin2PlantUML/commit/7f7efbf5d64ad5205eeb33fa41b05c6729baa2f8))
+
 ## [3.0.5](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.4...3.0.5) (2023-04-17)
 
 
