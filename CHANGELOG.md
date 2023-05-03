@@ -1,3 +1,15 @@
+## [3.0.8](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.7...3.0.8) (2023-05-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.jgrapht:jgrapht-core to v1.5.2 ([09684e9](https://github.com/kelvindev15/Kotlin2PlantUML/commit/09684e95764069f090f24a4ff2b535e212c91402))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.26 ([0a7743f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/0a7743f0b651ab36d679c97e30724960feaff8f6))
+
 ## [3.0.7](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.6...3.0.7) (2023-04-26)
 
 
