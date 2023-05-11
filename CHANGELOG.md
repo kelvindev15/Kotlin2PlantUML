@@ -1,3 +1,15 @@
+## [3.0.9](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.8...3.0.9) (2023-05-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.158 ([a61d36a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/a61d36a480e57a2c95a29089cfdbc80492e8b2a4))
+
+
+### Dependency updates
+
+* **deps:** update plugin kotlin-qa to v0.41.0 ([693f5fb](https://github.com/kelvindev15/Kotlin2PlantUML/commit/693f5fb354e7758bc4017ffb46f28da730e8fc1c))
+
 ## [3.0.8](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.7...3.0.8) (2023-05-03)
 
 
