@@ -1,3 +1,10 @@
+## [3.0.10](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.9...3.0.10) (2023-05-12)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.6.2 ([5a9641b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5a9641b08393d979b077126411c46983683f66df))
+
 ## [3.0.9](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.8...3.0.9) (2023-05-11)
 
 
