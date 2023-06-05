@@ -22,7 +22,7 @@ kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.42.1" }
 publicOnCentral = { id = "org.danilopianini.publish-on-central", version = "5.0.5" }
 dokka = { id = "org.jetbrains.dokka", version = "1.8.20" }
 shadowJar = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
-semanticVersioning = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "1.1.9" }
+semanticVersioning = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "1.1.10" }
 
 [bundles]
 kotlin = [ "kotlin-reflect", "kotlin-stdlib" ]
