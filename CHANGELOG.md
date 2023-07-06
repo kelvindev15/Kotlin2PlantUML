@@ -1,3 +1,39 @@
+## [3.0.12](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.11...3.0.12) (2023-07-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.161 ([6fa22b7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6fa22b731ba2135acdffbe90d7f0d7868b62cbd6))
+
+
+### Dependency updates
+
+* **deps:** update actions/checkout action to v3.5.3 ([bff7d60](https://github.com/kelvindev15/Kotlin2PlantUML/commit/bff7d60f19be9a7117d5c0b01193c52139ebf59f))
+* **deps:** update danysk/action-checkout action to v0.2.10 ([3bf7821](https://github.com/kelvindev15/Kotlin2PlantUML/commit/3bf7821a9d882e0550c2df4e2fbbc34d2f72d134))
+* **deps:** update dependency gradle to v8.2 ([18f2c35](https://github.com/kelvindev15/Kotlin2PlantUML/commit/18f2c3509fca20f7d50beddddf83f281ee2c6459))
+* **deps:** update dependency org.jetbrains.kotlin.jvm to v1.8.22 ([69d7f20](https://github.com/kelvindev15/Kotlin2PlantUML/commit/69d7f20def8a9eb81c4d6bf5cd72fa2376f86242))
+* **deps:** update dependency org.jetbrains.kotlin.jvm to v1.9.0 ([d60b496](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d60b496e0036bb5d6df251942fe44e3e5ae8b820))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.30 ([3d7cec9](https://github.com/kelvindev15/Kotlin2PlantUML/commit/3d7cec9ed83982e32a214d0661252a0f8359a708))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.32 ([dea2561](https://github.com/kelvindev15/Kotlin2PlantUML/commit/dea256162583e53042dd97dbd36a7d568d8dc80e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.33 ([0f36370](https://github.com/kelvindev15/Kotlin2PlantUML/commit/0f36370fa412a29a82bdfee2958fa99cf03a7974))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.35 ([37961b7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/37961b77386157785361e134070214ecfb0cc065))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.37 ([2d4e4b8](https://github.com/kelvindev15/Kotlin2PlantUML/commit/2d4e4b896580ed2f5137e6235b7ae6448fd5ad6f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.38 ([ee84735](https://github.com/kelvindev15/Kotlin2PlantUML/commit/ee847353a47376f046147ae7056f10f097fd75be))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.39 ([5aaec61](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5aaec6190959075b9257fd228a5a48ff279c902f))
+* **deps:** update plugin dokka to v1.8.20 ([f1e276b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/f1e276b5bd51573d47ef5758ab4a7976fd88433b))
+* **deps:** update plugin kotlin-qa to v0.42.1 ([1402f72](https://github.com/kelvindev15/Kotlin2PlantUML/commit/1402f72ae5114ad2ba66dfa54085a6e5c2c5a93d))
+* **deps:** update plugin kotlin-qa to v0.43.0 ([79645b9](https://github.com/kelvindev15/Kotlin2PlantUML/commit/79645b923a3d4f533724b554b10c500b271d338b))
+* **deps:** update plugin kotlin-qa to v0.44.0 ([96b7498](https://github.com/kelvindev15/Kotlin2PlantUML/commit/96b749816ec9bf1c56e30e3b3475488eac7a3dce))
+* **deps:** update plugin kotlin-qa to v0.45.0 ([cbf0d08](https://github.com/kelvindev15/Kotlin2PlantUML/commit/cbf0d08a5703ee4d5c445b73ab46b0b6024551e2))
+* **deps:** update plugin kotlin-qa to v0.46.0 ([cabeb53](https://github.com/kelvindev15/Kotlin2PlantUML/commit/cabeb53762c438be26efe85c8bee7bc46760a1e7))
+* **deps:** update plugin kotlin-qa to v0.46.1 ([d1ea56a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/d1ea56a6afacf02dccadea659587f3ecf161fd15))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.8 ([22e8d67](https://github.com/kelvindev15/Kotlin2PlantUML/commit/22e8d677c8e3dcf42b1056c102ed3184449aca4e))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.9 ([0a71432](https://github.com/kelvindev15/Kotlin2PlantUML/commit/0a71432e2158e016e65b27e7e521a4a4a2178e32))
+* **deps:** update plugin publiconcentral to v5.0.6 ([5dff83f](https://github.com/kelvindev15/Kotlin2PlantUML/commit/5dff83fee0aaa9d06d769e44977deb95b45ee520))
+* **deps:** update plugin publiconcentral to v5.0.7 ([4026c61](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4026c61d1dd3db75a6ef3724ed9a059551c6ed40))
+* **deps:** update plugin publiconcentral to v5.0.9 ([1eb0c64](https://github.com/kelvindev15/Kotlin2PlantUML/commit/1eb0c640b2fb28495610258c034bd8055868aef4))
+* **deps:** update plugin semanticversioning to v1.1.10 ([2e5be6b](https://github.com/kelvindev15/Kotlin2PlantUML/commit/2e5be6b1bc9eecbb589543b3369e9b74e241774c))
+
 ## [3.0.11](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.10...3.0.11) (2023-05-24)
 
 
