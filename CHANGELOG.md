@@ -1,3 +1,23 @@
+## [3.0.13](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.12...3.0.13) (2023-07-24)
+
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.10.0 ([cad0442](https://github.com/kelvindev15/Kotlin2PlantUML/commit/cad04421bbd90b11d2ebf293a37648549a03381e))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.7 ([7d6be46](https://github.com/kelvindev15/Kotlin2PlantUML/commit/7d6be4627e29c54dfa127bad5fc011601dc34e6c))
+* **deps:** update dependency gradle to v8.2.1 ([b2eee68](https://github.com/kelvindev15/Kotlin2PlantUML/commit/b2eee684bea5e466fcca19dc6c3b22cebea3e989))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.40 ([4198094](https://github.com/kelvindev15/Kotlin2PlantUML/commit/41980947bc4b169835ad511ca82b4079b0a69a1b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.41 ([795f29a](https://github.com/kelvindev15/Kotlin2PlantUML/commit/795f29a4bc7ff53edd9d0cd1ef29b7ceae91a985))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.43 ([8f3db60](https://github.com/kelvindev15/Kotlin2PlantUML/commit/8f3db60cedbd00befdea5b3e832acdb8a90e4732))
+* **deps:** update node.js to 18.17 ([8c651f9](https://github.com/kelvindev15/Kotlin2PlantUML/commit/8c651f90420eee4382cb3b1dd88b2593583b62b8))
+* **deps:** update plugin kotlin-qa to v0.47.0 ([4e9b212](https://github.com/kelvindev15/Kotlin2PlantUML/commit/4e9b212916bbc7579df582502cd6def5059c0bd2))
+* **deps:** update plugin kotlin-qa to v0.47.1 ([11e5217](https://github.com/kelvindev15/Kotlin2PlantUML/commit/11e5217a8fabac5c1aaa3c76f21d4f4952128241))
+* **deps:** update plugin publiconcentral to v5.0.10 ([2f1b4e7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/2f1b4e7d4b34deeff66b5f93f4b83b8b5d64759b))
+
 ## [3.0.12](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.11...3.0.12) (2023-07-06)
 
 
