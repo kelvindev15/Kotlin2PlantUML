@@ -1,3 +1,17 @@
+## [3.0.14](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.13...3.0.14) (2023-08-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.162 ([93a53e5](https://github.com/kelvindev15/Kotlin2PlantUML/commit/93a53e5dc675a4106f770b097b3b2f808349c707))
+
+
+### Dependency updates
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.8 ([1fabba7](https://github.com/kelvindev15/Kotlin2PlantUML/commit/1fabba7afd1c7c1edc55f406d0c18fedc782bc13))
+* **deps:** update plugin kotlin-qa to v0.48.0 ([6620943](https://github.com/kelvindev15/Kotlin2PlantUML/commit/6620943376c138c0fd3328293f82619ccba30a8e))
+* **deps:** update plugin kotlin-qa to v0.49.0 ([0c846fa](https://github.com/kelvindev15/Kotlin2PlantUML/commit/0c846faed0b81db5eb8bbe980ee0ac9e519d9edf))
+
 ## [3.0.13](https://github.com/kelvindev15/Kotlin2PlantUML/compare/3.0.12...3.0.13) (2023-07-24)
 
 
