@@ -1,12 +1,14 @@
 pull_request_rules:
   - name: "Rebase on passing tests"
     conditions:
-      - author=renovate[bot]
-      - check-success=success
-      - check-skipped=success
-      - check-neutral=success
-      - -draft
-      - -conflict
+      - and:
+        - author=renovate[bot]
+        - or:
+          - check-success=success
+          - check-skipped=success
+          - check-neutral=success
+        - -draft
+        - -conflict
     actions:
       merge:
         method: rebase
