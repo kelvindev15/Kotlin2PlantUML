@@ -4,9 +4,7 @@ pull_request_rules:
       - author=renovate[bot]
       - check-success=test-deploy
       - check-success=release
-      - check-success=test: Linux
-      - check-success=test: Windows
-      - check-success=test: MacOs
+      - check-success=test
     actions:
       rebase:
   
