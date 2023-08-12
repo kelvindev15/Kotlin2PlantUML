@@ -3,6 +3,8 @@ pull_request_rules:
     conditions:
       - author=renovate[bot]
       - check-success=success
+      - check-skipped=success
+      - check-cancelled=success
       - -draft
       - -conflict
     actions:
