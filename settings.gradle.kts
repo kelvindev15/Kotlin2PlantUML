@@ -1,7 +1,7 @@
 rootProject.name = "Kotlin2PlantUML"
 
 plugins {
-    id("org.danilopianini.gradle-pre-commit-git-hooks") version "1.1.14"
+    id("org.danilopianini.gradle-pre-commit-git-hooks") version "1.1.15"
 }
 
 gitHooks {
