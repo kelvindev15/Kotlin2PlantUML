@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Checkout
         uses: danysk/action-checkout@0.2.14
-      - uses: DanySK/build-check-deploy-gradle-action@2.4.1
+      - uses: DanySK/build-check-deploy-gradle-action@2.4.2
         with:
           build_command: 'true'
           should-run-codecov: ${{ contains('Linux', runner.os) }}
@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Checkout
         uses: danysk/action-checkout@0.2.14
-      - uses: DanySK/build-check-deploy-gradle-action@2.4.1
+      - uses: DanySK/build-check-deploy-gradle-action@2.4.2
         with:
           build-command: true
           check-command: |
@@ -46,7 +46,7 @@ jobs:
           should-run-codecov: false
           should-deploy: false
           should-validate-wrapper: false
-      - uses: DanySK/build-check-deploy-gradle-action@2.4.1
+      - uses: DanySK/build-check-deploy-gradle-action@2.4.2
         if: contains(github.repository, 'Kotlin2PlantUML') && contains('push workflow_dispatch', github.event_name)
         with:
           build-command: true
@@ -76,7 +76,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           submodules: recursive
-      - uses: DanySK/build-check-deploy-gradle-action@2.4.1
+      - uses: DanySK/build-check-deploy-gradle-action@2.4.2
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
