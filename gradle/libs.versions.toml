@@ -10,7 +10,7 @@ kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref =
 kotest-runner = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
-classgraph = { module = "io.github.classgraph:classgraph", version = "4.8.165" }
+classgraph = { module = "io.github.classgraph:classgraph", version = "4.8.166" }
 jGraph = { module = "org.jgrapht:jgrapht-core", version = "1.5.2" }
 common-cli = { module = "commons-cli:commons-cli", version = "1.6.0" }
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jUnit" }
