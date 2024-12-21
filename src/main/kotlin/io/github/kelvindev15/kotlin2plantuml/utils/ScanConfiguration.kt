@@ -4,7 +4,6 @@ package io.github.kelvindev15.kotlin2plantuml.utils
  * Configures the scanning configuration.
  */
 interface ScanConfiguration {
-
     /**
      * Add a package in which to scan classes in hierarchies.
      */

@@ -2,6 +2,7 @@ package io.github.kelvindev15.kotlin2plantuml.test.sample
 
 interface Vehicle<T> {
     fun start()
+
     fun stop()
 }
 
@@ -23,7 +24,9 @@ interface TwoWheels<T, P> : Wheeled<T, P>
 
 interface FourWheels<T, P, A> : Wheeled<T, P>
 
-class Bicycle<T, P> : AbstractVehicle<T>(), TwoWheels<T, P> {
+class Bicycle<T, P> :
+    AbstractVehicle<T>(),
+    TwoWheels<T, P> {
     override fun description(): String {
         TODO("Not yet implemented")
     }
@@ -54,7 +57,9 @@ class Car<T, O, A : ComplexGeneric<T, O, A>> :
 }
 
 @Suppress("UnusedPrivateClass")
-private class PrivateCar<T> : AbstractVehicle<T>(), OutOfThree {
+private class PrivateCar<T> :
+    AbstractVehicle<T>(),
+    OutOfThree {
     override fun description(): String {
         TODO("Not yet implemented")
     }

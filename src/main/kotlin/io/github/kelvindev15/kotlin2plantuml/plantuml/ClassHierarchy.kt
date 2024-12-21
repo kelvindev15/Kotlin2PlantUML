@@ -18,53 +18,61 @@ class ClassHierarchy(
     val rootClass: KClass<*>,
     private val configuration: Configuration = Configuration(),
 ) : Graph<KClass<*>, PlantUmlRelationship> by DefaultDirectedGraph(PlantUmlRelationship::class.java) {
-
     init {
         addVertex(rootClass)
         // GRAPH VERTICES
-        ClassGraph().acceptPackages(
-            rootClass.java.packageName,
-            *DefaultScanConfiguration.scanPackages.toTypedArray(),
-        ).addClassLoader(DefaultScanConfiguration.classLoader).scan().let {
-            if (rootClass.isInterface) {
-                it.getClassesImplementing(rootClass.java)
-            } else {
-                it.getSubclasses(rootClass.java)
-            }
-        }.loadClasses().forEach { addVertex(it.kotlin) }
+        ClassGraph()
+            .acceptPackages(
+                rootClass.java.packageName,
+                *DefaultScanConfiguration.scanPackages.toTypedArray(),
+            ).addClassLoader(DefaultScanConfiguration.classLoader)
+            .scan()
+            .let {
+                if (rootClass.isInterface) {
+                    it.getClassesImplementing(rootClass.java)
+                } else {
+                    it.getSubclasses(rootClass.java)
+                }
+            }.loadClasses()
+            .forEach { addVertex(it.kotlin) }
         // GRAPH EDGES
         vertexSet().forEach {
             it.superclasses.filter { c -> c in vertexSet() }.forEach { superclass ->
-                val relationshipType = if (it.isInterface != superclass.isInterface) {
-                    RelationshipType.IMPLEMENTS
-                } else {
-                    RelationshipType.EXTENDS
-                }
+                val relationshipType =
+                    if (it.isInterface != superclass.isInterface) {
+                        RelationshipType.IMPLEMENTS
+                    } else {
+                        RelationshipType.EXTENDS
+                    }
                 addEdge(it, superclass, PlantUmlRelationship(relationshipType))
             }
         }
     }
 
-    private fun entities() = buildString {
-        vertexSet()
-            .forEach {
-                append(PlantUmlClass(it, configuration).plantUml())
+    private fun entities() =
+        buildString {
+            vertexSet()
+                .forEach {
+                    append(PlantUmlClass(it, configuration).plantUml())
+                    appendLine()
+                }
+        }
+
+    private fun relationships() =
+        buildString {
+            edgeSet().forEach {
+                append(it.plantUml())
                 appendLine()
             }
-    }
-    private fun relationships() = buildString {
-        edgeSet().forEach {
-            append(it.plantUml())
-            appendLine()
         }
-    }
 
-    private fun plantUmlHierarchy() = buildString {
-        append(entities())
-        if (!configuration.hideRelationships) {
-            append(relationships())
+    private fun plantUmlHierarchy() =
+        buildString {
+            append(entities())
+            if (!configuration.hideRelationships) {
+                append(relationships())
+            }
         }
-    }
 
     /**
      * PlantUml representation of [rootClass].
