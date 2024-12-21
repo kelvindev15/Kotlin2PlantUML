@@ -29,24 +29,26 @@ class PlantUmlClass(
     /**
      * Returns [classRef]'s PlantUML string.
      */
-    fun plantUml(): String = buildString {
-        append(classRef.plantUml())
-        append(" {")
-        appendLine()
-        classRef.declaredMembers.filter {
-            it.visibility?.let { visibility ->
-                when (it) {
-                    is KFunction<*> ->
-                        !configuration.hideMethods && visibility.canShow(configuration.maxMethodVisibility)
-                    is KProperty<*> ->
-                        !configuration.hideFields && visibility.canShow(configuration.maxFieldVisibility)
-                    else -> false
-                }
-            } ?: false
-        }.forEach {
-            append("    ${it.plantUml()}")
+    fun plantUml(): String =
+        buildString {
+            append(classRef.plantUml())
+            append(" {")
             appendLine()
+            classRef.declaredMembers
+                .filter {
+                    it.visibility?.let { visibility ->
+                        when (it) {
+                            is KFunction<*> ->
+                                !configuration.hideMethods && visibility.canShow(configuration.maxMethodVisibility)
+                            is KProperty<*> ->
+                                !configuration.hideFields && visibility.canShow(configuration.maxFieldVisibility)
+                            else -> false
+                        }
+                    } ?: false
+                }.forEach {
+                    append("    ${it.plantUml()}")
+                    appendLine()
+                }
+            append("}\n")
         }
-        append("}\n")
-    }
 }

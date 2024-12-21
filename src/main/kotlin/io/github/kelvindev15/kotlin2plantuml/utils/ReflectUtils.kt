@@ -17,7 +17,6 @@ import kotlin.reflect.jvm.jvmErasure
  */
 class ReflectUtils private constructor() {
     companion object {
-
         private fun loadClassOrNull(fullyQualifiedClass: String): KClass<*>? {
             var result: KClass<*>? = null
             try {
@@ -26,7 +25,8 @@ class ReflectUtils private constructor() {
                     classLoader = URLClassLoader(classLoader.urLs, ClassLoader.getSystemClassLoader())
                 }
                 result = classLoader.loadClass(fullyQualifiedClass).kotlin
-            } catch (_: ClassNotFoundException) { }
+            } catch (_: ClassNotFoundException) {
+            }
             return result
         }
 
@@ -47,20 +47,23 @@ class ReflectUtils private constructor() {
             packages: Iterable<String>,
             simpleClassName: String,
             lazyMessage: () -> String = { "Unable to find $simpleClassName in the provided packages" },
-        ): KClass<*> = packages.mapNotNull { loadClassOrNull("$it.$simpleClassName") }
-            .also { require(it.isNotEmpty(), lazyMessage) }
-            .first()
+        ): KClass<*> =
+            packages
+                .mapNotNull { loadClassOrNull("$it.$simpleClassName") }
+                .also { require(it.isNotEmpty(), lazyMessage) }
+                .first()
 
         /**
          * @return a character corresponding to the plantuml visibility specification.
          */
-        fun KVisibility?.plantUml() = when (this) {
-            KVisibility.PUBLIC -> "+"
-            KVisibility.PROTECTED -> "#"
-            KVisibility.INTERNAL -> "~"
-            KVisibility.PRIVATE -> "-"
-            else -> ""
-        }
+        fun KVisibility?.plantUml() =
+            when (this) {
+                KVisibility.PUBLIC -> "+"
+                KVisibility.PROTECTED -> "#"
+                KVisibility.INTERNAL -> "~"
+                KVisibility.PRIVATE -> "-"
+                else -> ""
+            }
 
         /**
          * @return true if entity with this [KVisibility] can be displayed.
@@ -70,18 +73,19 @@ class ReflectUtils private constructor() {
         /**
          * @return a plantuml representation of a [KCallable] (field or member function).
          */
-        fun KCallable<*>.plantUml() = buildString {
-            append(visibility.plantUml())
-            if (isAbstract) {
-                append("{abstract} ")
+        fun KCallable<*>.plantUml() =
+            buildString {
+                append(visibility.plantUml())
+                if (isAbstract) {
+                    append("{abstract} ")
+                }
+                append(name)
+                if (this@plantUml is KFunction) {
+                    append(valueParameters.joinToString(prefix = "(", separator = ", ", postfix = ")") { it.plantUml() })
+                }
+                append(": ")
+                append(returnType.plantUml())
             }
-            append(name)
-            if (this@plantUml is KFunction) {
-                append(valueParameters.joinToString(prefix = "(", separator = ", ", postfix = ")") { it.plantUml() })
-            }
-            append(": ")
-            append(returnType.plantUml())
-        }
 
         /**
          * @return a plantuml representation of a [KParameter].
@@ -91,24 +95,26 @@ class ReflectUtils private constructor() {
         /**
          * @return a plantuml representation o [KTypeParameter].
          */
-        fun KTypeParameter.plantUml(): String = buildString {
-            val upperBounds = this@plantUml.upperBounds.minus(Any::class.createType(nullable = true))
-            if (upperBounds.isNotEmpty()) {
-                append(upperBounds.joinToString(separator = ",\\n") { "${this@plantUml.name} : ${it.plantUml()}" })
-            } else {
-                append(this@plantUml.name)
+        fun KTypeParameter.plantUml(): String =
+            buildString {
+                val upperBounds = this@plantUml.upperBounds.minus(Any::class.createType(nullable = true))
+                if (upperBounds.isNotEmpty()) {
+                    append(upperBounds.joinToString(separator = ",\\n") { "${this@plantUml.name} : ${it.plantUml()}" })
+                } else {
+                    append(this@plantUml.name)
+                }
             }
-        }
 
         /**
          * PlantUml representation of [KType].
          */
-        fun KType.plantUml() = buildString {
-            append(jvmErasure.simpleName)
-            if (arguments.isNotEmpty()) {
-                append(arguments.joinToString(prefix = "<", postfix = ">") { it.toString().substringAfterLast(".") })
+        fun KType.plantUml() =
+            buildString {
+                append(jvmErasure.simpleName)
+                if (arguments.isNotEmpty()) {
+                    append(arguments.joinToString(prefix = "<", postfix = ">") { it.toString().substringAfterLast(".") })
+                }
             }
-        }
 
         /**
          * @return true if this [KClass] is an interface
@@ -118,19 +124,20 @@ class ReflectUtils private constructor() {
         /**
          * @return a plantuml representation of a [KClass].
          */
-        fun KClass<*>.plantUml(): String = buildString {
-            if (isAbstract && !isInterface) {
-                append("abstract ")
+        fun KClass<*>.plantUml(): String =
+            buildString {
+                if (isAbstract && !isInterface) {
+                    append("abstract ")
+                }
+                if (isInterface) {
+                    append("interface ")
+                } else {
+                    append("class ")
+                }
+                append(simpleName)
+                if (typeParameters.isNotEmpty()) {
+                    append(typeParameters.joinToString(prefix = "<", separator = ",\\n", postfix = ">") { it.plantUml() })
+                }
             }
-            if (isInterface) {
-                append("interface ")
-            } else {
-                append("class ")
-            }
-            append(simpleName)
-            if (typeParameters.isNotEmpty()) {
-                append(typeParameters.joinToString(prefix = "<", separator = ",\\n", postfix = ">") { it.plantUml() })
-            }
-        }
     }
 }

@@ -8,11 +8,12 @@ import io.kotest.matchers.shouldBe
 import kotlin.reflect.KVisibility
 
 class RegressionTest : FunSpec() {
-
     private fun noCarriageReturn(text: String) = text.replace("\r", "")
 
-    private fun comparePlantUml(actual: String, plantUmlFilePath: String) =
-        noCarriageReturn(actual) shouldBe noCarriageReturn(ClassLoader.getSystemResource(plantUmlFilePath).readText())
+    private fun comparePlantUml(
+        actual: String,
+        plantUmlFilePath: String,
+    ) = noCarriageReturn(actual) shouldBe noCarriageReturn(ClassLoader.getSystemResource(plantUmlFilePath).readText())
 
     init {
         test("default configuration") {

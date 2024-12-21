@@ -16,12 +16,13 @@ class ClassDiagram(
     /**
      * @return a plantuml representation of this [ClassDiagram].
      */
-    fun plantUml() = buildString {
-        append("@startuml")
-        appendLine()
-        roots.distinct().forEach {
-            append(it.plantUml())
+    fun plantUml() =
+        buildString {
+            append("@startuml")
+            appendLine()
+            roots.distinct().forEach {
+                append(it.plantUml())
+            }
+            append("@enduml\n")
         }
-        append("@enduml\n")
-    }
 }

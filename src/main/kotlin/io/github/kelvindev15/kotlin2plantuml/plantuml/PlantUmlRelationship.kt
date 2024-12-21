@@ -9,7 +9,6 @@ import kotlin.reflect.KClass
 class PlantUmlRelationship(
     private val relationshipType: RelationshipType,
 ) : DefaultEdge() {
-
     /**
      * Source class of the relationship.
      */

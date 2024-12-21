@@ -32,7 +32,8 @@ dependencies {
     api(libs.jGraph)
     api(libs.classgraph)
     implementation(libs.common.cli)
-    /* Test */
+
+    // Test
     testImplementation(libs.bundles.kotest)
     testImplementation(libs.junit.jupiter.api)
     testRuntimeOnly(libs.junit.jupiter.engine)
@@ -96,7 +97,7 @@ publishing {
     }
 }
 
-tasks.withType<ShadowJar>() {
+tasks.withType<ShadowJar> {
     archiveBaseName.set("kotlin2plantuml")
     archiveClassifier.set("")
     archiveVersion.set("")
