@@ -8,6 +8,9 @@ import kotlin.io.path.Path
  * A default implementation of [ScanConfiguration].
  */
 class DefaultScanConfiguration private constructor() {
+    /**
+     * Static methods.
+     */
     companion object : ScanConfiguration {
         private val packages = mutableListOf<String>()
         private val classpath = mutableListOf<URL>()
