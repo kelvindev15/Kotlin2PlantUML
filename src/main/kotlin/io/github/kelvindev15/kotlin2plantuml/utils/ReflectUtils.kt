@@ -16,6 +16,9 @@ import kotlin.reflect.jvm.jvmErasure
  * PlantUML utilities.
  */
 class ReflectUtils private constructor() {
+    /**
+     * Utility functions for reflection.
+     */
     companion object {
         private fun loadClassOrNull(fullyQualifiedClass: String): KClass<*>? {
             var result: KClass<*>? = null
