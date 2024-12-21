@@ -84,7 +84,9 @@ class ReflectUtils private constructor() {
                 }
                 append(name)
                 if (this@plantUml is KFunction) {
-                    append(valueParameters.joinToString(prefix = "(", separator = ", ", postfix = ")") { it.plantUml() })
+                    append(
+                        valueParameters.joinToString(prefix = "(", separator = ", ", postfix = ")") { it.plantUml() },
+                    )
                 }
                 append(": ")
                 append(returnType.plantUml())
@@ -115,7 +117,11 @@ class ReflectUtils private constructor() {
             buildString {
                 append(jvmErasure.simpleName)
                 if (arguments.isNotEmpty()) {
-                    append(arguments.joinToString(prefix = "<", postfix = ">") { it.toString().substringAfterLast(".") })
+                    append(
+                        arguments.joinToString(prefix = "<", postfix = ">") {
+                            it.toString().substringAfterLast(".")
+                        },
+                    )
                 }
             }
 
@@ -139,7 +145,9 @@ class ReflectUtils private constructor() {
                 }
                 append(simpleName)
                 if (typeParameters.isNotEmpty()) {
-                    append(typeParameters.joinToString(prefix = "<", separator = ",\\n", postfix = ">") { it.plantUml() })
+                    append(
+                        typeParameters.joinToString(prefix = "<", separator = ",\\n", postfix = ">") { it.plantUml() },
+                    )
                 }
             }
     }
