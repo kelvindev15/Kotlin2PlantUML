@@ -1,6 +1,6 @@
 [versions]
 alchemist = "17.0.2"
-kotlin = "2.3.21"
+kotlin = "2.4.0"
 kotest = "6.1.11"
 jUnit = "6.1.0"
 
