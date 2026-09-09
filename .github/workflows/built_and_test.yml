@@ -51,7 +51,7 @@ jobs:
         with:
           build-command: true
           check-command: true
-          deploy-command: ./gradlew uploadKotlin close || ./gradlew uploadKotlin close || ./gradlew uploadKotlin close
+          deploy-command: ./gradlew uploadOSSRHToMavenCentralNexus close || ./gradlew uploadOSSRHToMavenCentralNexus close || ./gradlew uploadOSSRHToMavenCentralNexus close
           java-version: 17
           should-run-codecov: false
           should-deploy: true
