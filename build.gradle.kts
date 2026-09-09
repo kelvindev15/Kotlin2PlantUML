@@ -65,7 +65,6 @@ gitSemVer {
 }
 
 publishOnCentral {
-    configureMavenCentral.set(true)
     projectDescription.set("A kotlin library for generating plantuml from kotlin code.")
     projectLongName.set(project.name)
     licenseName.set("Apache License, Version 2.0")
