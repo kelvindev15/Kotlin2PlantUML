@@ -52,7 +52,7 @@ jobs:
           build-command: true
           check-command: true
           deploy-command: ./gradlew uploadKotlin close || ./gradlew uploadKotlin close || ./gradlew uploadKotlin close
-          java-version: 11
+          java-version: 17
           should-run-codecov: false
           should-deploy: true
           should-validate-wrapper: false
@@ -83,7 +83,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          java-version: 11
+          java-version: 17
           build-command: true
           check-command: true
           deploy-command: |
