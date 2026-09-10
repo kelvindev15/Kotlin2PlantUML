@@ -43,8 +43,8 @@ val githubUser = "Kelvindev15"
 
 if (System.getenv("CI") == true.toString()) {
     signing {
-        val signingKey: String? by project
-        val signingPassword: String? by project
+        val signingKey = project.findProperty("signingKey") as String?
+        val signingPassword = project.findProperty("signingPassword") as String?
         useInMemoryPgpKeys(signingKey, signingPassword)
     }
 }
