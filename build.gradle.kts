@@ -102,6 +102,18 @@ tasks.withType<ShadowJar> {
     archiveVersion.set("")
 }
 
+afterEvaluate {
+    // Shadow's "shadowRuntimeElements" variant collides with the plain jar in the OSSRH
+    // publication (both end up with extension 'jar' and no classifier), which fails
+    // Maven Central Portal publication validation. Excluded per publish-on-central's docs:
+    // https://github.com/DanySK/publish-on-central#excluding-large-shadowjars--uberjars--fatjars
+    components.withType<AdhocComponentWithVariants>().named("java").configure {
+        withVariantsFromConfiguration(configurations["shadowRuntimeElements"]) {
+            skip()
+        }
+    }
+}
+
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
