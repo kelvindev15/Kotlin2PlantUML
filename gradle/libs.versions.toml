@@ -19,7 +19,7 @@ junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", vers
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "1.9.0" }
-publicOnCentral = { id = "org.danilopianini.publish-on-central", version = "9.1.1" }
+publicOnCentral = { id = "org.danilopianini.publish-on-central", version = "9.1.15" }
 dokka = { id = "org.jetbrains.dokka", version = "2.2.0" }
 shadowJar = { id = "com.gradleup.shadow", version = "9.6.1" }
 semanticVersioning = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "7.0.24" }
