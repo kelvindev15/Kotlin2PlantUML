@@ -5,9 +5,9 @@ import io.github.kelvindev15.kotlin2plantuml.plantuml.Configuration
 import io.github.kelvindev15.kotlin2plantuml.utils.DefaultScanConfiguration
 import io.github.kelvindev15.kotlin2plantuml.utils.ReflectUtils
 import org.apache.commons.cli.DefaultParser
-import org.apache.commons.cli.HelpFormatter
 import org.apache.commons.cli.Option
 import org.apache.commons.cli.Options
+import org.apache.commons.cli.help.HelpFormatter
 import java.io.File
 import kotlin.reflect.KVisibility
 import kotlin.system.exitProcess
@@ -89,7 +89,10 @@ fun main(args: Array<String>) {
             maxMethodVisibility = toVisibility(commandLine.getOptionValue(methodVisibility)),
         )
     if (commandLine.hasOption(help)) {
-        HelpFormatter().printHelp("java -jar kotlin2plantuml.jar full.class.name [...options]", options)
+        HelpFormatter
+            .builder()
+            .get()
+            .printHelp("java -jar kotlin2plantuml.jar full.class.name [...options]", null, options, null, false)
         exitProcess(0)
     }
     require(args.isNotEmpty()) {
