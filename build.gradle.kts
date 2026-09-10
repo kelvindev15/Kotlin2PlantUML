@@ -61,7 +61,6 @@ gitSemVer {
     buildMetadataSeparator.set("+")
     distanceCounterRadix.set(36) // The radix for the commit-distance counter. Must be in the 2-36 range.
     versionPrefix.set("")
-    assignGitSemanticVersion()
 }
 
 publishOnCentral {
