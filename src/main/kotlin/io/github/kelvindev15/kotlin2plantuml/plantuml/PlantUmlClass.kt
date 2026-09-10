@@ -38,11 +38,17 @@ class PlantUmlClass(
                 .filter {
                     it.visibility?.let { visibility ->
                         when (it) {
-                            is KFunction<*> ->
+                            is KFunction<*> -> {
                                 !configuration.hideMethods && visibility.canShow(configuration.maxMethodVisibility)
-                            is KProperty<*> ->
+                            }
+
+                            is KProperty<*> -> {
                                 !configuration.hideFields && visibility.canShow(configuration.maxFieldVisibility)
-                            else -> false
+                            }
+
+                            else -> {
+                                false
+                            }
                         }
                     } ?: false
                 }.forEach {

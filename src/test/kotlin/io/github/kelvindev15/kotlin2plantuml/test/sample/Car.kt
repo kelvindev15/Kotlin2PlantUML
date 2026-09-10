@@ -46,10 +46,10 @@ class Car<T, O, A : ComplexGeneric<T, O, A>> :
         TODO("Not yet implemented")
     }
 
-    @Suppress("UnusedPrivateMember")
+    @Suppress("UnusedPrivateProperty")
     private val privateField = ""
 
-    @Suppress("EmptyFunctionBlock", "UnusedPrivateMember")
+    @Suppress("EmptyFunctionBlock", "UnusedPrivateFunction")
     private fun privateMethod() {}
 
     @Suppress("UnusedPrivateMember")
