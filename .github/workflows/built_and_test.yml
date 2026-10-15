@@ -82,7 +82,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-node@v7.1.0
         with:
-          node-version: '24.21'    
+          node-version: '24.22'    
       - uses: DanySK/build-check-deploy-gradle-action@4.0.49
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
